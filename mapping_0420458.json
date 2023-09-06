@@ -1,0 +1,1704 @@
+{
+  "xbrl_header": {
+    "xmlns:xbrldi": "http://xbrl.org/2006/xbrldi",
+    "xmlns:purcb-dic": "http://www.cbr.ru/xbrl/nso/purcb/dic/purcb-dic",
+    "xmlns:iso4217": "http://www.xbrl.org/2003/iso4217",
+    "xmlns:mem-int": "http://www.cbr.ru/xbrl/udr/dom/mem-int",
+    "xmlns:xlink": "http://www.w3.org/1999/xlink",
+    "xmlns:link": "http://www.xbrl.org/2003/linkbase",
+    "xmlns": "http://www.xbrl.org/2003/instance",
+    "xmlns:xbrli": "http://www.xbrl.org/2003/instance",
+    "xmlns:dim-int": "http://www.cbr.ru/xbrl/udr/dim/dim-int",
+    "xmlns:nfo-dic": "http://www.cbr.ru/xbrl/nso/nfo/dic"
+  },
+  "schemaref": "http://www.cbr.ru/xbrl/nso/purcb/rep/2023-09-30/ep/ep_nso_purcb_oper_nr_ex_mal.xsd",
+  "units": {
+    "unit1": {
+      "id": "pure",
+      "text": "xbrli:pure"
+    },
+    "unit2": {
+      "id": "RUB",
+      "text": "iso4217:RUB"
+    }
+  },
+  "root": "Ф0420458",
+  "data": {
+	"razdel_reestr": {
+      "tag": "Ф0420458_РеестрЦБ_Строка",
+      "parent_tags": [
+        "Ф0420458_РеестрЦБ",
+        "Ф0420458_РеестрЦБ_Данные"
+      ],
+      "lines": null,
+      "axiss_y_synthetic": {},
+      "taxis": {
+        "@ИдентефикаторЦБ": "dim-int:ID_CzennojBumagiTaxis|dim-int:ID_CzennojBumagi_TypedName"
+      },
+      "varible": {
+        "@ТипЦБ": {
+          "var": "nfo-dic:TipCZenBumVidFIEnumerator",
+          "axis": null,
+          "enum": {
+            "BON5": "mem-int:BON5_obligacziiingosudarstv_iobligaczii_inczentrbankovMember",
+            "BON6": "mem-int:BON6_obligacziibankov_nerezidentovMember",
+            "BON7": "mem-int:BON7_obligacziiprochixnerezidentovMember",
+            "DS1": "mem-int:DS1_depozitnyesertifikatyKOrezidentovMember",
+            "DS2": "mem-int:DS2_depozitnyesertifikatybankovnerezidentovMember",
+            "SS1": "mem-int:SS1_sbersertifikatyKOrezidentovMember",
+            "SS2": "mem-int:SS2_sbersertifikatybankovnerezidentovMember",
+            "SHS1": "mem-int:SHS1_akcziiKOrezidentov_obyknovennyeMember",
+            "SHS2": "mem-int:SHS2_akcziiKOrezidentov_privilegirovannyeMember",
+            "SHS3": "mem-int:SHS3_akcziiprochixrezidentov_obyknovennyeMember",
+            "SHS4": "mem-int:SHS4_akcziiprochixrezidentov_privilegirovannyeMember",
+            "SHS5": "mem-int:SHS5_akcziibankov_nerezidentovMember",
+            "SHS6": "mem-int:SHS6_akcziiprochixnerezidentovMember",
+            "SHS7": "mem-int:SHS7_pai_doli_investfondov_nerezidentovMember",
+            "SHS8": "mem-int:SHS8_pai_doli_investfondovrezidentovMember",
+            "BIL1": "mem-int:BIL1_vekselyaFOIV_RFMember",
+            "BIL2": "mem-int:BIL2_vekselya_OIVsubektov_RFimuniczipalnyxobrazovanijMember",
+            "BIL3": "mem-int:BIL3_vekselya_KOrezidentovMember",
+            "BIL4": "mem-int:BIL4_vekselyaprochixrezidentovMember",
+            "BIL5": "mem-int:BIL5_vekselya_ingosudarstvaMember",
+            "BIL6": "mem-int:BIL6_vekselya_bankovnerezidentovMember",
+            "BIL7": "mem-int:BIL7_vekselya_prochixnerezidentovMember",
+            "CON": "mem-int:CON_konosamentMember",
+            "WTS": "mem-int:WTS_skladskoesvidetelstvoMember",
+            "OPN": "mem-int:OPN_opczionyemitentaMember",
+            "KSU": "mem-int:KSU_kliringovyjsertifikatuchastiyaMember",
+            "ISU": "mem-int:ISU_ipotechnyesertifikatyuchastiyaMember",
+            "BON1": "mem-int:BON1_obligaczii_emitirovannyeFOIV_RF_i_obligacziiBRMember",
+            "BON2": "mem-int:BON2_obligaczii_emitir_OIVsubektovRF_i_municzobrazovanijMember",
+            "BON3": "mem-int:BON3_obligaczii_KO_rezidentovMember",
+            "BON4": "mem-int:BON4_obligaczii_prochix_rezidentovMember",
+            "OTHER": "mem-int:OTHER_fin_instMember",
+            "SN3": "mem-int:StrukturDolgCzennBumKreditOrg_NerezidentMember",
+            "SN4": "mem-int:StrukturDolgCzennBum_ProchNerezidentMember",
+            "ENC1": "mem-int:Dokumentzakladnye_neobezdvizhennyeMember",
+            "ENC2": "mem-int:ObezdvizhennyeDokumentZakladnyeMember",
+            "ENC3": "mem-int:ElektronnyeZakladnyeMember",
+            "DR1": "mem-int:DepozitRaspiskiRUSEmitentMember",
+            "DR2": "mem-int:DepozitRaspiskiInostranEmitenttMember",
+            "SN1": "mem-int:StrukturDolgCzennBumKreditOrg_RezidentMember",
+            "SN2": "mem-int:StrukturDolgCzennBum_ProchRezidentMember",
+            "DFA1": "mem-int:DFA1_CZFA_DenTrebMember",
+            "DFA2": "mem-int:DFA2_CZFA_EmCZBMember",
+            "DFA3": "mem-int:DFA3_CZFA_UchastVKapitMember",
+            "DFA4": "mem-int:DFA4_CZFA_TrebPeredEmCZBMember",
+            "DGR(UDR_DFA)": "mem-int:UDR_DFA_CZP_UtilitCZP_CZFAMember",
+            "DGR(OTHER)": "mem-int:DGR_OtherMember",
+            "DIGS(UDR1)": "mem-int:DIGS_UDR1Member",
+            "DIGS(UDR2)": "mem-int:DIGS_UDR2Member",
+            "DIGS(UDR3)": "mem-int:DIGS_UDR3Member",
+            "UDR1": "mem-int:UDR1Member",
+            "UDR2": "mem-int:UDR2Member",
+            "UDR3": "mem-int:UDR3Member",
+            "DFA5": "mem-int:DFA5Member"
+          }
+        },
+        "@НаименованиеЦБ": {
+          "var": "purcb-dic:NaimCZB",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+        "@РегНомерВыпуска": {
+          "var": "nfo-dic:GosRegNomerVyp",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+        "@ISIN": {
+          "var": "nfo-dic:ISIN",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+        "@НаимЭмитента": {
+          "var": "nfo-dic:PolnNaim",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+        "@ИНН_TINЭмитента": {
+          "var": "purcb-dic:INN_Rekv_em",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+        "@ОГРНЭмитента": {
+          "var": "nfo-dic:OGRN_Emit",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+        "@КодСтраны": {
+          "var": "nfo-dic:Kod_stranEnumerator",
+          "axis": null,
+          "enum": {
+            "100": "mem-int:Strana_100BgrBolgariyaMember",
+            "104": "mem-int:Strana_104MmrMyanmaMember",
+            "108": "mem-int:Strana_108BdiBurundiMember",
+            "112": "mem-int:Strana_112BlrBelarusMember",
+            "116": "mem-int:Strana_116KhmKambodzhaMember",
+            "120": "mem-int:Strana_120CmrKamerunMember",
+            "124": "mem-int:Strana_124CanKanadaMember",
+            "132": "mem-int:Strana_132CpvKaboVerdeMember",
+            "136": "mem-int:Strana_136CymOstrovaKajmanMember",
+            "140": "mem-int:Strana_140CafCZentralnoAfrikanskayaRespublikaMember",
+            "144": "mem-int:Strana_144LkaSHriLankaMember",
+            "148": "mem-int:Strana_148TcdCHadMember",
+            "152": "mem-int:Strana_152ChlCHiliMember",
+            "156": "mem-int:Strana_156ChnKitajMember",
+            "158": "mem-int:Strana_158TwnTajvanKitajMember",
+            "162": "mem-int:Strana_162CxrOstrovRozhdestvaMember",
+            "166": "mem-int:Strana_166CckKokosovyeKilingOstrovaMember",
+            "170": "mem-int:Strana_170ColKolumbiyaMember",
+            "174": "mem-int:Strana_174ComKomoryMember",
+            "175": "mem-int:Strana_175MytMajottaMember",
+            "178": "mem-int:Strana_178CogKongoMember",
+            "180": "mem-int:Strana_180CodKongoDemokraticheskayaRespublikaMember",
+            "184": "mem-int:Strana_184CokOstrovaKukaMember",
+            "188": "mem-int:Strana_188CriKostaRikaMember",
+            "191": "mem-int:Strana_191HrvXorvatiyaMember",
+            "192": "mem-int:Strana_192CubKubaMember",
+            "196": "mem-int:Strana_196CypKiprMember",
+            "203": "mem-int:Strana_203CzeCHeshskayaRespublikaMember",
+            "204": "mem-int:Strana_204BenBeninMember",
+            "208": "mem-int:Strana_208DnkDaniyaMember",
+            "212": "mem-int:Strana_212DmaDominikaMember",
+            "214": "mem-int:Strana_214DomDominikanskayaRespublikaMember",
+            "218": "mem-int:Strana_218EcuEkvadorMember",
+            "222": "mem-int:Strana_222SlvElSalvadorMember",
+            "226": "mem-int:Strana_226GnqEkvatorialnayaGvineyaMember",
+            "231": "mem-int:Strana_231EthEfiopiyaMember",
+            "232": "mem-int:Strana_232EriEritreyaMember",
+            "233": "mem-int:Strana_233EstEstoniyaMember",
+            "234": "mem-int:Strana_234FroFarerskieOstrovaMember",
+            "238": "mem-int:Strana_238FlkFolklendskieOstrovaMalvinskieMember",
+            "239": "mem-int:Strana_239SgsYUzhnayaDzhordzhiyaIYUzhnyeSandvichevyOstrovaMember",
+            "242": "mem-int:Strana_242FjiFidzhiMember",
+            "246": "mem-int:Strana_246FinFinlyandiyaMember",
+            "248": "mem-int:Strana_248AlaElandskieOstrovaMember",
+            "250": "mem-int:Strana_250FraFrancziyaMember",
+            "254": "mem-int:Strana_254GufFranczuzskayaGvianaMember",
+            "258": "mem-int:Strana_258PyfFranczuzskayaPolineziyaMember",
+            "260": "mem-int:Strana_260AtfFranczuzskieYUzhnyeTerritoriiMember",
+            "262": "mem-int:Strana_262DjiDzhibutiMember",
+            "266": "mem-int:Strana_266GabGabonMember",
+            "268": "mem-int:Strana_268GeoGruziyaMember",
+            "270": "mem-int:Strana_270GmbGambiyaMember",
+            "275": "mem-int:Strana_275PsePalestinaGosudarstvoMember",
+            "276": "mem-int:Strana_276DeuGermaniyaMember",
+            "288": "mem-int:Strana_288GhaGanaMember",
+            "292": "mem-int:Strana_292GibGibraltarMember",
+            "296": "mem-int:Strana_296KirKiribatiMember",
+            "300": "mem-int:Strana_300GrcGrecziyaMember",
+            "304": "mem-int:Strana_304GrlGrenlandiyaMember",
+            "308": "mem-int:Strana_308GrdGrenadaMember",
+            "312": "mem-int:Strana_312GlpGvadelupaMember",
+            "316": "mem-int:Strana_316GumGuamMember",
+            "320": "mem-int:Strana_320GtmGvatemalaMember",
+            "324": "mem-int:Strana_324GinGvineyaMember",
+            "328": "mem-int:Strana_328GuyGajanaMember",
+            "332": "mem-int:Strana_332HtiGaitiMember",
+            "334": "mem-int:Strana_334HmdOstrovXerdIOstrovaMakdonaldMember",
+            "336": "mem-int:Strana_336VatPapskijPrestolGosudarstvoGorodVatikanMember",
+            "340": "mem-int:Strana_340HndGondurasMember",
+            "344": "mem-int:Strana_344HkgGonkongMember",
+            "348": "mem-int:Strana_348HunVengriyaMember",
+            "352": "mem-int:Strana_352IslIslandiyaMember",
+            "356": "mem-int:Strana_356IndIndiyaMember",
+            "360": "mem-int:Strana_360IdnIndoneziyaMember",
+            "364": "mem-int:Strana_364IrnIranIslamskayaRespublikaMember",
+            "368": "mem-int:Strana_368IrqIrakMember",
+            "372": "mem-int:Strana_372IrlIrlandiyaMember",
+            "376": "mem-int:Strana_376IsrIzrailMember",
+            "380": "mem-int:Strana_380ItaItaliyaMember",
+            "384": "mem-int:Strana_384CivKotDIvuarMember",
+            "388": "mem-int:Strana_388JamYAmajkaMember",
+            "392": "mem-int:Strana_392JpnYAponiyaMember",
+            "398": "mem-int:Strana_398KazKazaxstanMember",
+            "400": "mem-int:Strana_400JorIordaniyaMember",
+            "404": "mem-int:Strana_404KenKeniyaMember",
+            "408": "mem-int:Strana_408PrkKoreyaNarodnoDemokraticheskayaRespublikaMember",
+            "410": "mem-int:Strana_410KorKoreyaRespublikaMember",
+            "414": "mem-int:Strana_414KwtKuvejtMember",
+            "417": "mem-int:Strana_417KgzKirgiziyaMember",
+            "418": "mem-int:Strana_418LaoLaosskayaNarodnoDemokraticheskayaRespublikaMember",
+            "422": "mem-int:Strana_422LbnLivanMember",
+            "426": "mem-int:Strana_426LsoLesotoMember",
+            "428": "mem-int:Strana_428LvaLatviyaMember",
+            "430": "mem-int:Strana_430LbrLiberiyaMember",
+            "434": "mem-int:Strana_434LbyLiviyaMember",
+            "438": "mem-int:Strana_438LieLixtenshtejnMember",
+            "440": "mem-int:Strana_440LtuLitvaMember",
+            "442": "mem-int:Strana_442LuxLyuksemburgMember",
+            "446": "mem-int:Strana_446MacMakaoMember",
+            "450": "mem-int:Strana_450MdgMadagaskarMember",
+            "454": "mem-int:Strana_454MwiMalaviMember",
+            "458": "mem-int:Strana_458MysMalajziyaMember",
+            "462": "mem-int:Strana_462MdvMaldivyMember",
+            "466": "mem-int:Strana_466MliMaliMember",
+            "470": "mem-int:Strana_470MltMaltaMember",
+            "474": "mem-int:Strana_474MtqMartinikaMember",
+            "478": "mem-int:Strana_478MrtMavritaniyaMember",
+            "480": "mem-int:Strana_480MusMavrikijMember",
+            "484": "mem-int:Strana_484MexMeksikaMember",
+            "492": "mem-int:Strana_492McoMonakoMember",
+            "496": "mem-int:Strana_496MngMongoliyaMember",
+            "498": "mem-int:Strana_498MdaMoldovaRespublikaMember",
+            "499": "mem-int:Strana_499MneCHernogoriyaMember",
+            "500": "mem-int:Strana_500MsrMontserratMember",
+            "504": "mem-int:Strana_504MarMarokkoMember",
+            "508": "mem-int:Strana_508MozMozambikMember",
+            "512": "mem-int:Strana_512OmnOmanMember",
+            "516": "mem-int:Strana_516NamNamibiyaMember",
+            "520": "mem-int:Strana_520NruNauruMember",
+            "524": "mem-int:Strana_524NplNepalMember",
+            "528": "mem-int:Strana_528NldNiderlandyMember",
+            "531": "mem-int:Strana_531CuwKyurasaoMember",
+            "533": "mem-int:Strana_533AbwArubaMember",
+            "534": "mem-int:Strana_534SxmSenMartenNiderlandskayaCHastMember",
+            "535": "mem-int:Strana_535BesBonejrSintEstatiusISabaMember",
+            "540": "mem-int:Strana_540NclNovayaKaledoniyaMember",
+            "548": "mem-int:Strana_548VutVanuatuMember",
+            "554": "mem-int:Strana_554NzlNovayaZelandiyaMember",
+            "558": "mem-int:Strana_558NicNikaraguaMember",
+            "562": "mem-int:Strana_562NerNigerMember",
+            "566": "mem-int:Strana_566NgaNigeriyaMember",
+            "570": "mem-int:Strana_570NiuNiueMember",
+            "574": "mem-int:Strana_574NfkOstrovNorfolkMember",
+            "578": "mem-int:Strana_578NorNorvegiyaMember",
+            "580": "mem-int:Strana_580MnpSevernyeMarianskieOstrovaMember",
+            "581": "mem-int:Strana_581UmiMalyeTixookeanskieOtdalennyeOstrovaSoedinennyxSHtatovMember",
+            "583": "mem-int:Strana_583FsmMikroneziyaFederativnyeSHtatyMember",
+            "584": "mem-int:Strana_584MhlMarshallovyOstrovaMember",
+            "585": "mem-int:Strana_585PlwPalauMember",
+            "586": "mem-int:Strana_586PakPakistanMember",
+            "591": "mem-int:Strana_591PanPanamaMember",
+            "598": "mem-int:Strana_598PngPapuaNovayaGvineyaMember",
+            "600": "mem-int:Strana_600PryParagvajMember",
+            "604": "mem-int:Strana_604PerPeruMember",
+            "608": "mem-int:Strana_608PhlFilippinyMember",
+            "612": "mem-int:Strana_612PcnPitkernMember",
+            "616": "mem-int:Strana_616PolPolshaMember",
+            "620": "mem-int:Strana_620PrtPortugaliyaMember",
+            "624": "mem-int:Strana_624GnbGvineyaBisauMember",
+            "626": "mem-int:Strana_626TlsTimorLesteMember",
+            "630": "mem-int:Strana_630PriPuertoRikoMember",
+            "634": "mem-int:Strana_634QatKatarMember",
+            "638": "mem-int:Strana_638ReuReyunonMember",
+            "642": "mem-int:Strana_642RouRumyniyaMember",
+            "643": "mem-int:Strana_643RusRossiyaMember",
+            "646": "mem-int:Strana_646RwaRuandaMember",
+            "652": "mem-int:Strana_652BlmSenBartelemiMember",
+            "654": "mem-int:Strana_654ShnSvyatayaElenaOstrovVozneseniyaMember",
+            "659": "mem-int:Strana_659KnaSentKitsINevisMember",
+            "660": "mem-int:Strana_660AiaAngilyaMember",
+            "662": "mem-int:Strana_662LcaSentLyusiyaMember",
+            "663": "mem-int:Strana_663MafSenMartenMember",
+            "666": "mem-int:Strana_666SpmSenPerIMikelonMember",
+            "670": "mem-int:Strana_670VctSentVinsentIGrenadinyMember",
+            "674": "mem-int:Strana_674SmrSanMarinoMember",
+            "678": "mem-int:Strana_678StpSanTomeIPrinsipiMember",
+            "682": "mem-int:Strana_682SauSaudovskayaAraviyaMember",
+            "686": "mem-int:Strana_686SenSenegalMember",
+            "688": "mem-int:Strana_688SrbSerbiyaMember",
+            "690": "mem-int:Strana_690SycSejshelyMember",
+            "694": "mem-int:Strana_694SleSerraLeoneMember",
+            "702": "mem-int:Strana_702SgpSingapurMember",
+            "703": "mem-int:Strana_703SvkSlovakiyaMember",
+            "704": "mem-int:Strana_704VnmVetnamMember",
+            "705": "mem-int:Strana_705SvnSloveniyaMember",
+            "706": "mem-int:Strana_706SomSomaliMember",
+            "710": "mem-int:Strana_710ZafYUzhnayaAfrikaMember",
+            "716": "mem-int:Strana_716ZweZimbabveMember",
+            "724": "mem-int:Strana_724EspIspaniyaMember",
+            "728": "mem-int:Strana_728SsdYUzhnyjSudanMember",
+            "729": "mem-int:Strana_729SdnSudanMember",
+            "732": "mem-int:Strana_732EshZapadnayaSaxaraMember",
+            "740": "mem-int:Strana_740SurSurinamMember",
+            "744": "mem-int:Strana_744SjmSHpiczbergenIYAnMajenMember",
+            "748": "mem-int:Strana_748SwzSvazilendMember",
+            "752": "mem-int:Strana_752SweSHvecziyaMember",
+            "756": "mem-int:Strana_756CheSHvejczariyaMember",
+            "760": "mem-int:Strana_760SyrSirijskayaArabskayaRespublikaMember",
+            "762": "mem-int:Strana_762TjkTadzhikistanMember",
+            "764": "mem-int:Strana_764ThaTailandMember",
+            "768": "mem-int:Strana_768TgoTogoMember",
+            "772": "mem-int:Strana_772TklTokelauMember",
+            "776": "mem-int:Strana_776TonTongaMember",
+            "780": "mem-int:Strana_780TtoTrinidadITobagoMember",
+            "784": "mem-int:Strana_784AreObedinennyeArabskieEmiratyMember",
+            "788": "mem-int:Strana_788TunTunisMember",
+            "792": "mem-int:Strana_792TurTurcziyaMember",
+            "795": "mem-int:Strana_795TkmTurkmeniyaMember",
+            "796": "mem-int:Strana_796TcaOstrovaTerksIKajkosMember",
+            "798": "mem-int:Strana_798TuvTuvaluMember",
+            "800": "mem-int:Strana_800UgaUgandaMember",
+            "804": "mem-int:Strana_804UkrUkrainaMember",
+            "807": "mem-int:Strana_807MkdRespublikaMakedoniyaMember",
+            "818": "mem-int:Strana_818EgyEgipetMember",
+            "826": "mem-int:Strana_826GbrSoedinennoeKorolevstvoMember",
+            "831": "mem-int:Strana_831GgyGernsiMember",
+            "832": "mem-int:Strana_832JeyDzhersiMember",
+            "833": "mem-int:Strana_833ImnOstrovMenMember",
+            "834": "mem-int:Strana_834TzaTanzaniyaObedinennayaRespublikaMember",
+            "840": "mem-int:Strana_840UsaSoedinennyeSHtatyMember",
+            "850": "mem-int:Strana_850VirVirginskieOstrovaSshaMember",
+            "854": "mem-int:Strana_854BfaBurkinaFasoMember",
+            "858": "mem-int:Strana_858UryUrugvajMember",
+            "860": "mem-int:Strana_860UzbUzbekistanMember",
+            "862": "mem-int:Strana_862VenVenesuelaMember",
+            "876": "mem-int:Strana_876WlfUollisIFutunaMember",
+            "882": "mem-int:Strana_882WsmSamoaMember",
+            "887": "mem-int:Strana_887YemJemenMember",
+            "894": "mem-int:Strana_894ZmbZambiyaMember",
+            "895": "mem-int:Strana_895AbhAbxaziyaMember",
+            "896": "mem-int:Strana_896OstYUzhnayaOsetiyaMember",
+            "897": "mem-int:Strana_897DnrDoneczkayaNarodnRespMember",
+            "898": "mem-int:Strana_898LnrLuganskayaNarondRespMember",
+            "996": "mem-int:Strana_996MezhdunarodnayaKompMember",
+            "998": "mem-int:Strana_998Mezhdunarodnaya_organizacziyaMember",
+            "999": "mem-int:Liczo_bez_grazhdanstvaMember",
+            "008": "mem-int:Strana_008AlbAlbaniyaMember",
+            "010": "mem-int:Strana_010AtaAntarktidaMember",
+            "012": "mem-int:Strana_012DzaAlzhirMember",
+            "016": "mem-int:Strana_016AsmAmerikanskoeSamoaMember",
+            "020": "mem-int:Strana_020AndAndorraMember",
+            "024": "mem-int:Strana_024AgoAngolaMember",
+            "028": "mem-int:Strana_028AtgAntiguaIBarbudaMember",
+            "031": "mem-int:Strana_031AzeAzerbajdzhanMember",
+            "032": "mem-int:Strana_032ArgArgentinaMember",
+            "036": "mem-int:Strana_036AusAvstraliyaMember",
+            "040": "mem-int:Strana_040AutAvstriyaMember",
+            "044": "mem-int:Strana_044BhsBagamyMember",
+            "048": "mem-int:Strana_048BhrBaxrejnMember",
+            "050": "mem-int:Strana_050BgdBangladeshMember",
+            "051": "mem-int:Strana_051ArmArmeniyaMember",
+            "052": "mem-int:Strana_052BrbBarbadosMember",
+            "056": "mem-int:Strana_056BelBelgiyaMember",
+            "060": "mem-int:Strana_060BmuBermudyMember",
+            "064": "mem-int:Strana_064BtnButanMember",
+            "068": "mem-int:Strana_068BolBoliviyaMnogonaczionalnoeGosudarstvoMember",
+            "070": "mem-int:Strana_070BihBosniyaIGerczegovinaMember",
+            "072": "mem-int:Strana_072BwaBotsvanaMember",
+            "074": "mem-int:Strana_074BvtOstrovBuveMember",
+            "076": "mem-int:Strana_076BraBraziliyaMember",
+            "084": "mem-int:Strana_084BlzBelizMember",
+            "086": "mem-int:Strana_086IotBritanskayaTerritoriyaVIndijskomOkeaneMember",
+            "090": "mem-int:Strana_090SlbSolomonovyOstrovaMember",
+            "092": "mem-int:Strana_092VgbVirginskieOstrovaBritanskieMember",
+            "096": "mem-int:Strana_096BrnBrunejDarussalamMember",
+            "004": "mem-int:Strana_004AfgAfganistanMember",
+            "ЛицоБезГражданства": "mem-int:LicoBezGrazhdanstvaMember",
+            "ИныеСтраныВклВОКСМ": "mem-int:Strana_InoMember"
+          }
+        },
+        "@КодВалюты": {
+          "var": "nfo-dic:Kod_valEnumerator",
+          "axis": null,
+          "enum": {
+            "230-ETB": "mem-int:Valyuta_230EtbEfiopskijByrMember",
+            "232-ERN": "mem-int:Valyuta_232ErnNakfaMember",
+            "238-FKP": "mem-int:Valyuta_238FkpFuntFolklendskixOstrovovMember",
+            "242-FJD": "mem-int:Valyuta_242FjdDollarFidzhiMember",
+            "262-DJF": "mem-int:Valyuta_262DjfFrankDzhibutiMember",
+            "270-GMD": "mem-int:Valyuta_270GmdDalasiMember",
+            "292-GIP": "mem-int:Valyuta_292GipGibraltarskijFuntMember",
+            "320-GTQ": "mem-int:Valyuta_320GtqKetsalMember",
+            "324-GNF": "mem-int:Valyuta_324GnfGvinejskijFrankMember",
+            "328-GYD": "mem-int:Valyuta_328GydGajanskijDollarMember",
+            "332-HTG": "mem-int:Valyuta_332HtgGurdMember",
+            "340-HNL": "mem-int:Valyuta_340HnlLempiraMember",
+            "344-HKD": "mem-int:Valyuta_344HkdGonkongskijDollarMember",
+            "348-HUF": "mem-int:Valyuta_348HufForintMember",
+            "352-ISK": "mem-int:Valyuta_352IskIslandskayaKronaMember",
+            "356-INR": "mem-int:Valyuta_356InrIndijskayaRupiyaMember",
+            "360-IDR": "mem-int:Valyuta_360IdrRupiyaMember",
+            "364-IRR": "mem-int:Valyuta_364IrrIranskijRialMember",
+            "368-IQD": "mem-int:Valyuta_368IqdIrakskijDinarMember",
+            "376-ILS": "mem-int:Valyuta_376IlsNovyjIzrailskijSHekelMember",
+            "388-JMD": "mem-int:Valyuta_388JmdYAmajskijDollarMember",
+            "392-JPY": "mem-int:Valyuta_392JpyIenaMember",
+            "398-KZT": "mem-int:Valyuta_398KztTengeMember",
+            "400-JOD": "mem-int:Valyuta_400JodIordanskijDinarMember",
+            "404-KES": "mem-int:Valyuta_404KesKenijskijSHillingMember",
+            "408-KPW": "mem-int:Valyuta_408KpwSeverokorejskayaVonaMember",
+            "410-KRW": "mem-int:Valyuta_410KrwVonaMember",
+            "414-KWD": "mem-int:Valyuta_414KwdKuvejtskijDinarMember",
+            "417-KGS": "mem-int:Valyuta_417KgsSomMember",
+            "418-LAK": "mem-int:Valyuta_418LakKipMember",
+            "422-LBP": "mem-int:Valyuta_422LbpLivanskijFuntMember",
+            "426-LSL": "mem-int:Valyuta_426LslLotiMember",
+            "430-LRD": "mem-int:Valyuta_430LrdLiberijskijDollarMember",
+            "434-LYD": "mem-int:Valyuta_434LydLivijskijDinarMember",
+            "446-MOP": "mem-int:Valyuta_446MopPatakaMember",
+            "008-ALL": "mem-int:Valyuta_008AllLekMember",
+            "012-DZD": "mem-int:Valyuta_012DzdAlzhirskijDinarMember",
+            "032-ARS": "mem-int:Valyuta_032ArsArgentinskoePesoMember",
+            "036-AUD": "mem-int:Valyuta_036AudAvstralijskijDollarMember",
+            "044-BSD": "mem-int:Valyuta_044BsdBagamskijDollarMember",
+            "048-BHD": "mem-int:Valyuta_048BhdBaxrejnskijDinarMember",
+            "050-BDT": "mem-int:Valyuta_050BdtTakaMember",
+            "051-AMD": "mem-int:Valyuta_051AmdArmyanskijDramMember",
+            "052-BBD": "mem-int:Valyuta_052BbdBarbadosskijDollarMember",
+            "060-BMD": "mem-int:Valyuta_060BmdBermudskijDollarMember",
+            "064-BTN": "mem-int:Valyuta_064BtnNgultrumMember",
+            "454-MWK": "mem-int:Valyuta_454MwkKvachaMember",
+            "458-MYR": "mem-int:Valyuta_458MyrMalajzijskijRinggitMember",
+            "462-MVR": "mem-int:Valyuta_462MvrRufiyaMember",
+            "480-MUR": "mem-int:Valyuta_480MurMavrikijskayaRupiyaMember",
+            "484-MXN": "mem-int:Valyuta_484MxnMeksikanskoePesoMember",
+            "496-MNT": "mem-int:Valyuta_496MntTugrikMember",
+            "498-MDL": "mem-int:Valyuta_498MdlMoldavskijLejMember",
+            "682-SAR": "mem-int:Valyuta_682SarSaudovskijRiyalMember",
+            "690-SCR": "mem-int:Valyuta_690ScrSejshelskayaRupiyaMember",
+            "694-SLL": "mem-int:Valyuta_694SllLeoneMember",
+            "702-SGD": "mem-int:Valyuta_702SgdSingapurskijDollarMember",
+            "704-VND": "mem-int:Valyuta_704VndDongMember",
+            "706-SOS": "mem-int:Valyuta_706SosSomalijskijSHillingMember",
+            "710-ZAR": "mem-int:Valyuta_710ZarRendMember",
+            "728-SSP": "mem-int:Valyuta_728SspYUzhnosudanskijFuntMember",
+            "748-SZL": "mem-int:Valyuta_748SzlLilangeniMember",
+            "752-SEK": "mem-int:Valyuta_752SekSHvedskayaKronaMember",
+            "756-CHF": "mem-int:Valyuta_756ChfSHvejczarskijFrankMember",
+            "760-SYP": "mem-int:Valyuta_760SypSirijskijFuntMember",
+            "764-THB": "mem-int:Valyuta_764ThbBatMember",
+            "776-TOP": "mem-int:Valyuta_776TopPaangaMember",
+            "780-TTD": "mem-int:Valyuta_780TtdDollarTrinidadaITobagoMember",
+            "504-MAD": "mem-int:Valyuta_504MadMarokkanskijDirxamMember",
+            "512-OMR": "mem-int:Valyuta_512OmrOmanskijRialMember",
+            "516-NAD": "mem-int:Valyuta_516NadDollarNamibiiMember",
+            "524-NPR": "mem-int:Valyuta_524NprNepalskayaRupiyaMember",
+            "532-ANG": "mem-int:Valyuta_532AngNiderlandskijAntilskijGuldenMember",
+            "533-AWG": "mem-int:Valyuta_533AwgArubanskijFlorinMember",
+            "548-VUV": "mem-int:Valyuta_548VuvVatuMember",
+            "554-NZD": "mem-int:Valyuta_554NzdNovozelandskijDollarMember",
+            "558-NIO": "mem-int:Valyuta_558NioZolotayaKordobaMember",
+            "566-NGN": "mem-int:Valyuta_566NgnNajraMember",
+            "578-NOK": "mem-int:Valyuta_578NokNorvezhskayaKronaMember",
+            "586-PKR": "mem-int:Valyuta_586PkrPakistanskayaRupiyaMember",
+            "068-BOB": "mem-int:Valyuta_068BobBolivianoMember",
+            "072-BWP": "mem-int:Valyuta_072BwpPulaMember",
+            "084-BZD": "mem-int:Valyuta_084BzdBelizskijDollarMember",
+            "090-SBD": "mem-int:Valyuta_090SbdDollarSolomonovyxOstrovovMember",
+            "096-BND": "mem-int:Valyuta_096BndBrunejskijDollarMember",
+            "104-MMK": "mem-int:Valyuta_104MmkKyatMember",
+            "108-BIF": "mem-int:Valyuta_108BifBurundijskijFrankMember",
+            "116-KHR": "mem-int:Valyuta_116KhrRielMember",
+            "124-CAD": "mem-int:Valyuta_124CadKanadskijDollarMember",
+            "132-CVE": "mem-int:Valyuta_132CveEskudoKaboVerdeMember",
+            "136-KYD": "mem-int:Valyuta_136KydDollarOstrovovKajmanMember",
+            "144-LKR": "mem-int:Valyuta_144LkrSHriLankijskayaRupiyaMember",
+            "152-CLP": "mem-int:Valyuta_152ClpCHilijskoePesoMember",
+            "156-CNY": "mem-int:Valyuta_156CnyYUanMember",
+            "170-COP": "mem-int:Valyuta_170CopKolumbijskoePesoMember",
+            "174-KMF": "mem-int:Valyuta_174KmfFrankKomorMember",
+            "188-CRC": "mem-int:Valyuta_188CrcKostarikanskijKolonMember",
+            "191-HRK": "mem-int:Valyuta_191HrkKunaMember",
+            "192-CUP": "mem-int:Valyuta_192CupKubinskoePesoMember",
+            "590-PAB": "mem-int:Valyuta_590PabBalboaMember",
+            "598-PGK": "mem-int:Valyuta_598PgkKinaMember",
+            "600-PYG": "mem-int:Valyuta_600PygGuaraniMember",
+            "604-PEN": "mem-int:Valyuta_604PenNovyjSolMember",
+            "608-PHP": "mem-int:Valyuta_608PhpFilippinskoePesoMember",
+            "634-QAR": "mem-int:Valyuta_634QarKatarskijRialMember",
+            "643-RUB": "mem-int:Valyuta_643RubRossijskijRublMember",
+            "784-AED": "mem-int:Valyuta_784AedDirxamOaeMember",
+            "788-TND": "mem-int:Valyuta_788TndTunisskijDinarMember",
+            "800-UGX": "mem-int:Valyuta_800UgxUgandijskijSHillingMember",
+            "807-MKD": "mem-int:Valyuta_807MkdDenarMember",
+            "818-EGP": "mem-int:Valyuta_818EgpEgipetskijFuntMember",
+            "826-GBP": "mem-int:Valyuta_826GbpFuntSterlingovMember",
+            "834-TZS": "mem-int:Valyuta_834TzsTanzanijskijSHillingMember",
+            "840-USD": "mem-int:Valyuta_840UsdDollarSshaMember",
+            "858-UYU": "mem-int:Valyuta_858UyuUrugvajskoePesoMember",
+            "860-UZS": "mem-int:Valyuta_860UzsUzbekskijSumMember",
+            "882-WST": "mem-int:Valyuta_882WstTalaMember",
+            "886-YER": "mem-int:Valyuta_886YerJemenskijRialMember",
+            "901-TWD": "mem-int:Valyuta_901TwdNovyjTajvanskijDollarMember",
+            "931-CUC": "mem-int:Valyuta_931CucKonvertiruemoePesoMember",
+            "932-ZWL": "mem-int:Valyuta_932ZwlDollarZimbabveMember",
+            "934-TMT": "mem-int:Valyuta_934TmtNovyjTurkmenskijManatMember",
+            "646-RWF": "mem-int:Valyuta_646RwfFrankRuandyMember",
+            "654-SHP": "mem-int:Valyuta_654ShpFuntSvyatojElenyMember",
+            "203-CZK": "mem-int:Valyuta_203CzkCHeshskayaKronaMember",
+            "208-DKK": "mem-int:Valyuta_208DkkDatskayaKronaMember",
+            "214-DOP": "mem-int:Valyuta_214DopDominikanskoePesoMember",
+            "222-SVC": "mem-int:Valyuta_222SvcSalvadorskijKolonMember",
+            "936-GHS": "mem-int:Valyuta_936GhsGanskijSediMember",
+            "938-SDG": "mem-int:Valyuta_938SdgSudanskijFuntMember",
+            "940-UYI": "mem-int:Valyuta_940UyiUrugvajskoePesoVIndeksirovannyxEdiniczaxMember",
+            "941-RSD": "mem-int:Valyuta_941RsdSerbskijDinarMember",
+            "943-MZN": "mem-int:Valyuta_943MznMozambikskijMetikalMember",
+            "944-AZN": "mem-int:Valyuta_944AznAzerbajdzhanskijManatMember",
+            "946-RON": "mem-int:Valyuta_946RonRumynskijLejMember",
+            "949-TRY": "mem-int:Valyuta_949TryTureczkayaLiraMember",
+            "950-XAF": "mem-int:Valyuta_950XafFrankKfaVeasMember",
+            "951-XCD": "mem-int:Valyuta_951XcdVostochnoKaribskijDollarMember",
+            "952-XOF": "mem-int:Valyuta_952XofFrankKfaVseaoMember",
+            "953-XPF": "mem-int:Valyuta_953XpfFrankKfpMember",
+            "960-XDR": "mem-int:Valyuta_960XdrSdrSpeczialnyePravaZaimstvovaniyaMember",
+            "967-ZMW": "mem-int:Valyuta_967ZmwZambijskayaKvachaMember",
+            "968-SRD": "mem-int:Valyuta_968SrdSurinamskijDollarMember",
+            "969-MGA": "mem-int:Valyuta_969MgaMalagasijskijAriariMember",
+            "970-COU": "mem-int:Valyuta_970CouEdiniczaRealnojStoimostiMember",
+            "971-AFN": "mem-int:Valyuta_971AfnAfganiMember",
+            "972-TJS": "mem-int:Valyuta_972TjsSomoniMember",
+            "973-AOA": "mem-int:Valyuta_973AoaKvanzaMember",
+            "975-BGN": "mem-int:Valyuta_975BgnBolgarskijLevMember",
+            "976-CDF": "mem-int:Valyuta_976CdfKongolezskijFrankMember",
+            "977-BAM": "mem-int:Valyuta_977BamKonvertiruemayaMarkaMember",
+            "978-EUR": "mem-int:Valyuta_978EurEvroMember",
+            "980-UAH": "mem-int:Valyuta_980UahGrivnaMember",
+            "981-GEL": "mem-int:Valyuta_981GelLariMember",
+            "985-PLN": "mem-int:Valyuta_985PlnZlotyjMember",
+            "986-BRL": "mem-int:Valyuta_986BrlBrazilskijRealMember",
+            "933-BYN": "mem-int:Valyuta_933BynBelorusskijRublMember",
+            "930-STN": "mem-int:Valyuta_930StnDobraMember",
+            "929-MRU": "mem-int:Valyuta_929MRUMember",
+            "928-VES": "mem-int:Valyuta_928VESMember",
+            "ИныеВалютыВклВОКВ": "mem-int:Valyuta_InoMember",
+            "925-SLE": "mem-int:Valyuta_925SleLeoneMember",
+            "926-VED": "mem-int:Valyuta_926VEDMember"
+          }
+        }
+      }
+    },
+    "razdel1": {
+      "parent_tags": [
+        "Ф0420458_Раздел1",
+        "Ф0420458_Раздел1_Данные"
+      ],
+      "lines": null,
+      "tag": "Ф0420458_Раздел1_Строка",
+      "axiss_y_synthetic": {
+        "@ТипКлиента": {
+          "ФЛ": [
+            "dim-int:Tip_i_status_klientaAxis|mem-int:FLMember"
+          ],
+          "ЮЛ": [
+            "dim-int:Tip_i_status_klientaAxis|mem-int:YULMember"
+          ]
+        },
+        "@УровеньРиска": {
+          "Повышенный": [
+            "dim-int:Uroven_riskaAxis|mem-int:PovyshMember"
+          ],
+          "Особый": [
+            "dim-int:Uroven_riskaAxis|mem-int:OsobMember"
+          ],
+          "Стандартный": [
+            "dim-int:Uroven_riskaAxis|mem-int:StandartMember"
+          ],
+          "Начальный": [
+            "dim-int:Uroven_riskaAxis|mem-int:NachalnyjMember"
+          ]
+        },
+        "@Резидентность": {
+          "Резидент": [
+            "dim-int:Rezident_nerezidentAxis|mem-int:RezidentMember"
+          ],
+          "Нерезидент": [
+            "dim-int:Rezident_nerezidentAxis|mem-int:NerezidentMember"
+          ]
+        },
+        "@КвалификацияКлиента": {
+          "Квалифицированный": [
+            "dim-int:KvalifikacziyaKlientaAxis|mem-int:KvalificzirovannyjInvestorMember"
+          ],
+          "Неквалифицированный": [
+            "dim-int:KvalifikacziyaKlientaAxis|mem-int:NekvalificzirovannyjInvestor_Member"
+          ]
+        },
+        "@СостНПРПортфКл": {
+          "НПР1Больше0": [
+            "dim-int:SosteNPRPortKlientaAxis|mem-int:PortSNPR1MenNulyaMember"
+          ],
+          "НПР1Меньше0НПР2Больше0 НПР2_больше_0": [
+            "dim-int:SosteNPRPortKlientaAxis|mem-int:PortSNPR1MenNulINPR2BolNulyaMember"
+          ],
+          "НПР2Меньше0МаржаРавна0": [
+            "dim-int:SosteNPRPortKlientaAxis|mem-int:PortSNPR2MenNulyaMarzhaNolMember"
+          ],
+          "НПР2Меньше0МаржаНе0": [
+            "dim-int:SosteNPRPortKlientaAxis|mem-int:PortSNPR2MenNulyaMarzhaNeNolMember"
+          ]
+        },
+        "@МетодРасчМаржи": {
+          "БезУчЗависМножеств": [
+            "dim-int:MetodRaschetaMarzhiAxis|mem-int:BezUchZavMnozhestvMember"
+          ],
+          "СУчЗависМножеств": [
+            "dim-int:MetodRaschetaMarzhiAxis|mem-int:SUchZavMnozhestvMember"
+          ]
+        },
+        "@КагортаОбъемаПортфКл": {
+          "0": [
+            "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:PustMember"
+          ],
+          "(0..10000]": [
+            "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:NolDesTRMember"
+          ],
+          "(10000..100000]": [
+            "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:DesStoTRMember"
+          ],
+          "(100000..1000000]": [
+            "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:StoMilRMember"
+          ],
+          "(10000000..100000000]": [
+            "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:DesStoMilRMember"
+          ],
+          "Меньше-10000000": [
+            "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:MenMinDesMlnRubMember"
+          ],
+          "(-1000000..-10000000]": [
+            "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:OtMinOdinMlnRubDoMinDesMlnRubMember"
+          ],
+          "(-100..-1000000]": [
+            "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:OtMinStoTysRubDoMinOdinMlnRubMember"
+          ],
+          "(-10000..-100000]": [
+            "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:OtMinDesTysRubDoMinStoTysRubMember"
+          ],
+          "(0..-10000]": [
+            "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:OtNolRubDoMinDesTysRubMember"
+          ],
+          "(1000000..100000000]": [
+            "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:OtOdinMlnRubDoDesMlnRubMember"
+          ],
+          "Больше100000000": [
+            "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:BoleeStaMilnRubMember"
+          ]
+        }
+      },
+      "taxis": {},
+      "varible": {
+        "@КолКлиентов": {
+          "var": "purcb-dic:KolichestvoKlientov",
+          "decimals": "0",
+          "unit": "pure",
+          "period": "instant",
+          "axis": null
+        },
+        "@КолПортфКлиентов": {
+          "var": "purcb-dic:KolPortKlientov",
+          "decimals": "0",
+          "unit": "pure",
+          "period": "instant",
+          "axis": null
+        },
+        "@РазмерНПР1": {
+          "var": "purcb-dic:RazmerNPR1",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": null
+        },
+        "@РазмерНПР2": {
+          "var": "purcb-dic:RazmerNPR2",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": null
+        },
+        "@СтоимостьПортфеля": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": null
+        },
+        "@СуммаНачМаржи": {
+          "var": "purcb-dic:SummaNachalnojMarzhi",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": null
+        },
+        "@ПрочаяИнфПоказатель": {
+          "var": "purcb-dic:PrInfPokazatel",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+        "@ПрочаяИнфДанные": {
+          "var": "purcb-dic:PrInfDannye",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+        "@СтоимостьПортфеляБМДлРуб": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Dlinnaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:Rubli_Member"
+          ]
+        },
+        "@СтоимостьПортфеляБМДлВал": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Dlinnaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:Inostrannaya_valyutaMember"
+          ]
+        },
+        "@СтоимостьПортфеляБМДлЦБ": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Dlinnaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:CZennyeBumagiMember"
+          ]
+        },
+        "@СтоимостьПортфеляБМДлФьюч": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Dlinnaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:FyuchersyMember"
+          ]
+        },
+        "@СтоимостьПортфеляБМДлОпц": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Dlinnaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:OpczionyMember"
+          ]
+        },
+        "@СтоимостьПортфеляБМДлИное": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Dlinnaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:Inoe_Member"
+          ]
+        },
+        "@СтоимостьПортфеляБМКорРуб": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:Rubli_Member"
+          ]
+        },
+        "@СтоимостьПортфеляБМКорВал": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:Inostrannaya_valyutaMember"
+          ]
+        },
+        "@СтоимостьПортфеляБМКорЦБ": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:CZennyeBumagiMember"
+          ]
+        },
+        "@СтоимостьПортфеляБМКорФьюч": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:FyuchersyMember"
+          ]
+        },
+        "@СтоимостьПортфеляБМКорОпц": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:OpczionyMember"
+          ]
+        },
+        "@СтоимостьПортфеляБМКорИное": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:Inoe_Member"
+          ]
+        },
+        "@СтоимостьПортфеляВМДлРуб": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Dlinnaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:Rubli_Member"
+          ]
+        },
+        "@СтоимостьПортфеляВМДлВал": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Dlinnaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:Inostrannaya_valyutaMember"
+          ]
+        },
+        "@СтоимостьПортфеляВМДлЦБ": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Dlinnaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:CZennyeBumagiMember"
+          ]
+        },
+        "@СтоимостьПортфеляВМДлФьюч": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Dlinnaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:FyuchersyMember"
+          ]
+        },
+        "@СтоимостьПортфеляВМДлОпц": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Dlinnaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:OpczionyMember"
+          ]
+        },
+        "@СтоимостьПортфеляВМДлИное": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Dlinnaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:Inoe_Member"
+          ]
+        },
+        "@СтоимостьПортфеляВМКорРуб": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:Rubli_Member"
+          ]
+        },
+        "@СтоимостьПортфеляВМКорВал": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:Inostrannaya_valyutaMember"
+          ]
+        },
+        "@СтоимостьПортфеляВМКорЦБ": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:CZennyeBumagiMember"
+          ]
+        },
+        "@СтоимостьПортфеляВМКорФьюч": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:FyuchersyMember"
+          ]
+        },
+        "@СтоимостьПортфеляВМКорОпц": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:OpczionyMember"
+          ]
+        },
+        "@СтоимостьПортфеляВМКорИное": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:Inoe_Member"
+          ]
+        },
+        "@СуммаНачМаржиБМВалРиск": {
+          "var": "purcb-dic:SummaNachalnojMarzhi",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:PoTipamAktivovAxis|mem-int:InValyutaIRiskPoValPoziczMember"
+          ]
+        },
+        "@СуммаНачМаржиБМЦБ": {
+          "var": "purcb-dic:SummaNachalnojMarzhi",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:PoTipamAktivovAxis|mem-int:CZennyeBumagiMember"
+          ]
+        },
+        "@СуммаНачМаржиБМФьюч": {
+          "var": "purcb-dic:SummaNachalnojMarzhi",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:PoTipamAktivovAxis|mem-int:FyuchersyMember"
+          ]
+        },
+        "@СуммаНачМаржиБМОпц": {
+          "var": "purcb-dic:SummaNachalnojMarzhi",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:PoTipamAktivovAxis|mem-int:OpczionyMember"
+          ]
+        },
+        "@СуммаНачМаржиБМИное": {
+          "var": "purcb-dic:SummaNachalnojMarzhi",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:BazovyjMetodMember",
+            "dim-int:PoTipamAktivovAxis|mem-int:Inoe_Member"
+          ]
+        },
+        "@СуммаНачМаржиВМВалРиск": {
+          "var": "purcb-dic:SummaNachalnojMarzhi",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:PoTipamAktivovAxis|mem-int:InValyutaIRiskPoValPoziczMember"
+          ]
+        },
+        "@СуммаНачМаржиВМЦБ": {
+          "var": "purcb-dic:SummaNachalnojMarzhi",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:PoTipamAktivovAxis|mem-int:CZennyeBumagiMember"
+          ]
+        },
+        "@СуммаНачМаржиВМФьюч": {
+          "var": "purcb-dic:SummaNachalnojMarzhi",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:PoTipamAktivovAxis|mem-int:FyuchersyMember"
+          ]
+        },
+        "@СуммаНачМаржиВМОпц": {
+          "var": "purcb-dic:SummaNachalnojMarzhi",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:PoTipamAktivovAxis|mem-int:OpczionyMember"
+          ]
+        },
+        "@СуммаНачМаржиВМИное": {
+          "var": "purcb-dic:SummaNachalnojMarzhi",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:VnutrennijMetodMember",
+            "dim-int:PoTipamAktivovAxis|mem-int:Inoe_Member"
+          ]
+        },
+        "@СуммаНачМаржиРынМетод": {
+          "var": "purcb-dic:SummaNachalnojMarzhi",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:MetodRaschetaStoimostiAxis|mem-int:RynochnyjMetodMember"
+          ]
+        }
+      }
+    },
+    "razdel2": {
+      "parent_tags": [
+        "Ф0420458_Раздел2",
+        "Ф0420458_Раздел2_Данные"
+      ],
+      "lines": null,
+      "tag": "Ф0420458_Раздел2_Строка",
+      "axiss_y_synthetic": {
+        "@ТипКлиента": {
+          "ФЛ": [
+            "dim-int:Tip_i_status_klientaAxis|mem-int:FLMember"
+          ],
+          "ЮЛ": [
+            "dim-int:Tip_i_status_klientaAxis|mem-int:YULMember"
+          ]
+        },
+        "@УровеньРиска": {
+          "Повышенный": [
+            "dim-int:Uroven_riskaAxis|mem-int:PovyshMember"
+          ],
+          "Особый": [
+            "dim-int:Uroven_riskaAxis|mem-int:OsobMember"
+          ],
+          "Стандартный": [
+            "dim-int:Uroven_riskaAxis|mem-int:StandartMember"
+          ],
+          "Начальный": [
+            "dim-int:Uroven_riskaAxis|mem-int:NachalnyjMember"
+          ]
+        },
+        "@Резидентность": {
+          "Резидент": [
+            "dim-int:Rezident_nerezidentAxis|mem-int:RezidentMember"
+          ],
+          "Нерезидент": [
+            "dim-int:Rezident_nerezidentAxis|mem-int:NerezidentMember"
+          ]
+        },
+        "@КвалификацияКлиента": {
+          "Квалифицированный": [
+            "dim-int:KvalifikacziyaKlientaAxis|mem-int:KvalificzirovannyjInvestorMember"
+          ],
+          "Неквалифицированный": [
+            "dim-int:KvalifikacziyaKlientaAxis|mem-int:NekvalificzirovannyjInvestor_Member"
+          ]
+        },
+        "@ТипОтсечки": {
+          "ОграничительноеВремя": [
+            "dim-int:TipOtsechkiAxis|mem-int:OgrVremyaMember"
+          ],
+          "КонецДня": [
+            "dim-int:TipOtsechkiAxis|mem-int:KoneczDnyaMember"
+          ]
+        },
+        "@КогортаПоПокНПР2": {
+          "Меньше-10000000": [
+            "dim-int:KogortaNPR2Axis|mem-int:MenMinDesMlnRubMember"
+          ],
+          "(-1000000..-10000000]": [
+            "dim-int:KogortaNPR2Axis|mem-int:OtMinOdinMlnRubDoMinDesMlnRubMember"
+          ],
+          "(-100000..-1000000]": [
+            "dim-int:KogortaNPR2Axis|mem-int:OtMinStoTysRubDoMinOdinMlnRubMember"
+          ],
+          "(-10000..-100000]": [
+            "dim-int:KogortaNPR2Axis|mem-int:OtMinDesTysRubDoMinStoTysRubMember"
+          ],
+          "(0..-10000]": [
+            "dim-int:KogortaNPR2Axis|mem-int:OtNolRubDoMinDesTysRubMember"
+          ]
+        }
+      },
+      "taxis": {
+        "@ДатаТоргДняОтчПер": "dim-int:Data_Torg_den_Taxis|dim-int:Data_Torg_denTypedname"
+      },
+      "varible": {
+        "@КолКлиентов": {
+          "var": "purcb-dic:KolichestvoKlientov",
+          "decimals": "0",
+          "unit": "pure",
+          "period": "instant",
+          "axis": null
+        },
+        "@КолПортфКлиентов": {
+          "var": "purcb-dic:KolPortKlientov",
+          "decimals": "0",
+          "unit": "pure",
+          "period": "instant",
+          "axis": null
+        },
+        "@РазмерНПР1": {
+          "var": "purcb-dic:RazmerNPR1",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": null
+        },
+        "@РазмерНПР2": {
+          "var": "purcb-dic:RazmerNPR2",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": null
+        },
+        "@СтоимостьПортфеля": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": null
+        },
+        "@СуммаНачМаржи": {
+          "var": "purcb-dic:SummaNachalnojMarzhi",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": null
+        },
+        "@ПрочаяИнфПоказатель": {
+          "var": "purcb-dic:PrInfPokazatel",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+        "@ПрочаяИнфДанные": {
+          "var": "purcb-dic:PrInfDannye",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        }
+      }
+    },
+    "razdel3": {
+      "tag": "Ф0420458_Раздел3_Строка",
+      "parent_tags": [
+        "Ф0420458_Раздел3",
+        "Ф0420458_Раздел3_Данные"
+      ],
+      "lines": null,
+      "axiss_y_synthetic": {
+        "@ТипКлиента": {
+          "ФЛ": [
+            "dim-int:Tip_i_status_klientaAxis|mem-int:FLMember"
+          ],
+          "ЮЛ": [
+            "dim-int:Tip_i_status_klientaAxis|mem-int:YULMember"
+          ]
+        },
+        "@УровеньРиска": {
+          "Повышенный": [
+            "dim-int:Uroven_riskaAxis|mem-int:PovyshMember"
+          ],
+          "Особый": [
+            "dim-int:Uroven_riskaAxis|mem-int:OsobMember"
+          ],
+          "Стандартный": [
+            "dim-int:Uroven_riskaAxis|mem-int:StandartMember"
+          ],
+          "Начальный": [
+            "dim-int:Uroven_riskaAxis|mem-int:NachalnyjMember"
+          ]
+        },
+        "@Резидентность": {
+          "Резидент": [
+            "dim-int:Rezident_nerezidentAxis|mem-int:RezidentMember"
+          ],
+          "Нерезидент": [
+            "dim-int:Rezident_nerezidentAxis|mem-int:NerezidentMember"
+          ]
+        },
+        "@КвалификацияКлиента": {
+          "Квалифицированный": [
+            "dim-int:KvalifikacziyaKlientaAxis|mem-int:KvalificzirovannyjInvestorMember"
+          ],
+          "Неквалифицированный": [
+            "dim-int:KvalifikacziyaKlientaAxis|mem-int:NekvalificzirovannyjInvestor_Member"
+          ]
+        },
+        "@СостНПРПортфКл": {
+          "НПР1Больше0": [
+            "dim-int:SosteNPRPortKlientaAxis|mem-int:PortSNPR1MenNulyaMember"
+          ],
+          "НПР1Меньше0НПР2Больше0 НПР2_больше_0": [
+            "dim-int:SosteNPRPortKlientaAxis|mem-int:PortSNPR1MenNulINPR2BolNulyaMember"
+          ],
+          "НПР2Меньше0МаржаРавна0": [
+            "dim-int:SosteNPRPortKlientaAxis|mem-int:PortSNPR2MenNulyaMarzhaNolMember"
+          ],
+          "НПР2Меньше0МаржаНе0": [
+            "dim-int:SosteNPRPortKlientaAxis|mem-int:PortSNPR2MenNulyaMarzhaNeNolMember"
+          ]
+        }
+      },
+      "taxis": {
+        "@ДатаТоргДняОтчПер": "dim-int:Data_Torg_den_Taxis|dim-int:Data_Torg_denTypedname"
+      },
+      "varible": {
+        "@КолКлиентов": {
+          "var": "purcb-dic:KolichestvoKlientov",
+          "decimals": "0",
+          "unit": "pure",
+          "period": "instant",
+          "axis": null
+        },
+        "@КолПортфКлиентов": {
+          "var": "purcb-dic:KolPortKlientov",
+          "decimals": "0",
+          "unit": "pure",
+          "period": "instant",
+          "axis": null
+        },
+        "@РазмерНПР1": {
+          "var": "purcb-dic:RazmerNPR1",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": null
+        },
+        "@РазмерНПР2": {
+          "var": "purcb-dic:RazmerNPR2",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": null
+        },
+        "@СтоимостьПортфеля": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": null
+        },
+        "@СуммаНачМаржи": {
+          "var": "purcb-dic:SummaNachalnojMarzhi",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": null
+        },
+        "@ПрочаяИнфПоказатель": {
+          "var": "purcb-dic:PrInfPokazatel",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+        "@ПрочаяИнфДанные": {
+          "var": "purcb-dic:PrInfDannye",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+        "@СтоимостьПортфеляКорВал": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:Inostrannaya_valyutaMember"
+          ]
+        },
+        "@СтоимостьПортфеляКорЦБ": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:CZennyeBumagiMember"
+          ]
+        },
+        "@СтоимостьПортфеляКорИное": {
+          "var": "purcb-dic:StoimostPortfelya",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": [
+            "dim-int:NapravleniePozicziiAxis|mem-int:Korotkaya_Pozicziya_Member",
+            "dim-int:PoTipamAktivovAxis|mem-int:Inoe_Member"
+          ]
+        }
+      }
+    },
+    "razdel4": {
+      "tag": "Ф0420458_Раздел4_Строка",
+      "parent_tags": [
+        "Ф0420458_Раздел4",
+        "Ф0420458_Раздел4_Данные"
+      ],
+      "lines": null,
+      "axiss_y_synthetic": {
+        "@ТипКлиента": {
+          "ФЛ": [
+            "dim-int:Tip_i_status_klientaAxis|mem-int:FLMember"
+          ],
+          "ЮЛ": [
+            "dim-int:Tip_i_status_klientaAxis|mem-int:YULMember"
+          ]
+        },
+        "@УровеньРиска": {
+          "Повышенный": [
+            "dim-int:Uroven_riskaAxis|mem-int:PovyshMember"
+          ],
+          "Особый": [
+            "dim-int:Uroven_riskaAxis|mem-int:OsobMember"
+          ],
+          "Стандартный": [
+            "dim-int:Uroven_riskaAxis|mem-int:StandartMember"
+          ],
+          "Начальный": [
+            "dim-int:Uroven_riskaAxis|mem-int:NachalnyjMember"
+          ]
+        },
+        "@Резидентность": {
+          "Резидент": [
+            "dim-int:Rezident_nerezidentAxis|mem-int:RezidentMember"
+          ],
+          "Нерезидент": [
+            "dim-int:Rezident_nerezidentAxis|mem-int:NerezidentMember"
+          ]
+        },
+        "@КвалификацияКлиента": {
+          "Квалифицированный": [
+            "dim-int:KvalifikacziyaKlientaAxis|mem-int:KvalificzirovannyjInvestorMember"
+          ],
+          "Неквалифицированный": [
+            "dim-int:KvalifikacziyaKlientaAxis|mem-int:NekvalificzirovannyjInvestor_Member"
+          ]
+        },
+        "@ТипАктива": {
+          "ИностраннаяВалюта": [
+            "dim-int:PoTipamAktivovAxis|mem-int:Inostrannaya_valyutaMember"
+          ],
+          "ЦенныеБумаги": [
+            "dim-int:PoTipamAktivovAxis|mem-int:CZennyeBumagiMember"
+          ],
+          "Иное": [
+            "dim-int:PoTipamAktivovAxis|mem-int:Inoe_Member"
+          ]
+        }
+      },
+      "taxis": {
+        "@ИдентификаторАктива": "dim-int:Identifikator_ATaxis|dim-int:IDAktivaTypedName"
+      },
+      "varible": {
+        "@КолвоАктива": {
+          "var": "purcb-dic:KolichestvoAktiva",
+          "decimals": "0",
+          "unit": "pure",
+          "period": "instant",
+          "axis": null
+        },
+        "@СуммаКорПозиций": {
+          "var": "purcb-dic:Summ_korot_poz",
+          "decimals": "2",
+          "unit": "RUB",
+          "period": "instant",
+          "axis": null
+        },
+        "@ПрочаяИнфПоказатель": {
+          "var": "purcb-dic:PrInfPokazatel",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+        "@ПрочаяИнфДанные": {
+          "var": "purcb-dic:PrInfDannye",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        }
+      }
+    },
+    "razdel5": {
+      "tag": "Ф0420458_Раздел5_Строка",
+      "parent_tags": [
+        "Ф0420458_Раздел5",
+        "Ф0420458_Раздел5_Данные"
+      ],
+      "lines": null,
+      "axiss_y_synthetic": {
+        "@ТипКлиента": {
+          "ФЛ": [
+            "dim-int:Tip_i_status_klientaAxis|mem-int:FLMember"
+          ],
+          "ЮЛ": [
+            "dim-int:Tip_i_status_klientaAxis|mem-int:YULMember"
+          ]
+        },
+        "@УровеньРиска": {
+          "Повышенный": [
+            "dim-int:Uroven_riskaAxis|mem-int:PovyshMember"
+          ],
+          "Особый": [
+            "dim-int:Uroven_riskaAxis|mem-int:OsobMember"
+          ],
+          "Стандартный": [
+            "dim-int:Uroven_riskaAxis|mem-int:StandartMember"
+          ],
+          "Начальный": [
+            "dim-int:Uroven_riskaAxis|mem-int:NachalnyjMember"
+          ]
+        },
+        "@Резидентность": {
+          "Резидент": [
+            "dim-int:Rezident_nerezidentAxis|mem-int:RezidentMember"
+          ],
+          "Нерезидент": [
+            "dim-int:Rezident_nerezidentAxis|mem-int:NerezidentMember"
+          ]
+        },
+        "@КвалификацияКлиента": {
+          "Квалифицированный": [
+            "dim-int:KvalifikacziyaKlientaAxis|mem-int:KvalificzirovannyjInvestorMember"
+          ],
+          "Неквалифицированный": [
+            "dim-int:KvalifikacziyaKlientaAxis|mem-int:NekvalificzirovannyjInvestor_Member"
+          ]
+        },
+        "@КогортаПоОбСделокПринудЗакр": {
+          "Больше100000000": [
+            "dim-int:KogortaPoObemuSdelokPrinudzakrAxis|mem-int:BoleeStaMilnRubMember"
+          ],
+          "(10000000..100000000]": [
+            "dim-int:KogortaPoObemuSdelokPrinudzakrAxis|mem-int:DesStoMilRMember"
+          ],
+          "(100000..1000000]": [
+            "dim-int:KogortaPoObemuSdelokPrinudzakrAxis|mem-int:StoMilRMember"
+          ],
+          "(10000..100000]": [
+            "dim-int:KogortaPoObemuSdelokPrinudzakrAxis|mem-int:DesStoTRMember"
+          ],
+          "(0..10000]": [
+            "dim-int:KogortaPoObemuSdelokPrinudzakrAxis|mem-int:NolDesTRMember"
+          ],
+          "(1000000..10000000]": [
+            "dim-int:KogortaPoObemuSdelokPrinudzakrAxis|mem-int:OtOdinMlnRubDoDesMlnRubMember"
+          ]
+        }
+      },
+      "taxis": {
+        "@ДатаТоргДняОтчПер": "dim-int:Data_Torg_den_Taxis|dim-int:Data_Torg_denTypedname"
+      },
+      "varible": {
+        "@КолКлиентов": {
+          "var": "purcb-dic:KolichestvoKlientov",
+          "decimals": "0",
+          "unit": "pure",
+          "period": "instant",
+          "axis": null
+        },
+        "@КолПортфКлиентов": {
+          "var": "purcb-dic:KolPortKlientov",
+          "decimals": "0",
+          "unit": "pure",
+          "period": "instant",
+          "axis": null
+        },
+        "@КолСделокПринудЗакр": {
+          "var": "purcb-dic:KolvoSdelokPrinudZakr",
+          "decimals": "0",
+          "unit": "pure",
+          "duration": "1",
+          "axis": null
+        },
+        "@ОбъемСделокПринудЗакрЦБПокупка": {
+          "var": "purcb-dic:ObemSdelokPrinudZakr",
+          "decimals": "2",
+          "unit": "RUB",
+          "duration": "1",
+          "axis": [
+            "dim-int:PoTipamAktivovAxis|mem-int:CZennyeBumagiMember",
+            "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
+          ]
+        },
+        "@ОбъемСделокПринудЗакрЦБПродажа": {
+          "var": "purcb-dic:ObemSdelokPrinudZakr",
+          "decimals": "2",
+          "unit": "RUB",
+          "duration": "1",
+          "axis": [
+            "dim-int:PoTipamAktivovAxis|mem-int:CZennyeBumagiMember",
+            "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"
+          ]
+        },
+        "@ОбъемСделокПринудЗакрВалПокупка": {
+          "var": "purcb-dic:ObemSdelokPrinudZakr",
+          "decimals": "2",
+          "unit": "RUB",
+          "duration": "1",
+          "axis": [
+            "dim-int:PoTipamAktivovAxis|mem-int:Inostrannaya_valyutaMember",
+            "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
+          ]
+        },
+        "@ОбъемСделокПринудЗакрВалПродажа": {
+          "var": "purcb-dic:ObemSdelokPrinudZakr",
+          "decimals": "2",
+          "unit": "RUB",
+          "duration": "1",
+          "axis": [
+            "dim-int:PoTipamAktivovAxis|mem-int:Inostrannaya_valyutaMember",
+            "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"
+          ]
+        },
+        "@ОбъемСделокПринудЗакрФьючПокупка": {
+          "var": "purcb-dic:ObemSdelokPrinudZakr",
+          "decimals": "2",
+          "unit": "RUB",
+          "duration": "1",
+          "axis": [
+            "dim-int:PoTipamAktivovAxis|mem-int:FyuchersyMember",
+            "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
+          ]
+        },
+        "@ОбъемСделокПринудЗакрФьючПродажа": {
+          "var": "purcb-dic:ObemSdelokPrinudZakr",
+          "decimals": "2",
+          "unit": "RUB",
+          "duration": "1",
+          "axis": [
+            "dim-int:PoTipamAktivovAxis|mem-int:FyuchersyMember",
+            "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"
+          ]
+        },
+        "@ОбъемСделокПринудЗакрОпцПокупка": {
+          "var": "purcb-dic:ObemSdelokPrinudZakr",
+          "decimals": "2",
+          "unit": "RUB",
+          "duration": "1",
+          "axis": [
+            "dim-int:PoTipamAktivovAxis|mem-int:OpczionyMember",
+            "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
+          ]
+        },
+        "@ОбъемСделокПринудЗакрОпцПродажа": {
+          "var": "purcb-dic:ObemSdelokPrinudZakr",
+          "decimals": "2",
+          "unit": "RUB",
+          "duration": "1",
+          "axis": [
+            "dim-int:PoTipamAktivovAxis|mem-int:OpczionyMember",
+            "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"
+          ]
+        },
+        "@ОбъемСделокПринудЗакрИноеПокупка": {
+          "var": "purcb-dic:ObemSdelokPrinudZakr",
+          "decimals": "2",
+          "unit": "RUB",
+          "duration": "1",
+          "axis": [
+            "dim-int:PoTipamAktivovAxis|mem-int:Inoe_Member",
+            "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
+          ]
+        },
+        "@ОбъемСделокПринудЗакрИноеПродажа": {
+          "var": "purcb-dic:ObemSdelokPrinudZakr",
+          "decimals": "2",
+          "unit": "RUB",
+          "duration": "1",
+          "axis": [
+            "dim-int:PoTipamAktivovAxis|mem-int:Inoe_Member",
+            "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"
+          ]
+        },
+        "@ПрочаяИнфПоказатель": {
+          "var": "purcb-dic:PrInfPokazatel",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+        "@ПрочаяИнфДанные": {
+          "var": "purcb-dic:PrInfDannye",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        }
+      }
+    }
+  }
+}

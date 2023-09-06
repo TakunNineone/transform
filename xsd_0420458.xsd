@@ -1,0 +1,1306 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="urn:cbr-ru:rep0420458:v1.0"
+           xmlns="urn:cbr-ru:rep0420458:v1.0"
+           xmlns:report_0420458="urn:cbr-ru:rep0420458:v1.0">
+	<xs:element name="Ф0420458"
+	            xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:complexType xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:sequence>
+			<xs:element name="Составитель" type="Ф0420458Составитель" minOccurs="1" maxOccurs="1"/>			
+				<xs:element name="Ф0420458_Раздел1"
+				            type="Ф0420458_Раздел1"
+				            minOccurs="0"
+				            maxOccurs="1"/>
+				<xs:element name="Ф0420458_Раздел2"
+				            type="Ф0420458_Раздел2"
+				            minOccurs="0"
+				            maxOccurs="1"/>
+				<xs:element name="Ф0420458_Раздел3"
+				            type="Ф0420458_Раздел3"
+				            minOccurs="0"
+				            maxOccurs="1"/>
+				<xs:element name="Ф0420458_Раздел4"
+				            type="Ф0420458_Раздел4"
+				            minOccurs="0"
+				            maxOccurs="1"/>
+				<xs:element name="Ф0420458_Раздел5"
+				            type="Ф0420458_Раздел5"
+				            minOccurs="0"
+				            maxOccurs="1"/>
+				<xs:element name="Ф0420458_РеестрЦБ"
+				            type="Ф0420458_РеестрЦБ"
+				            minOccurs="0"
+				            maxOccurs="1"/>
+			</xs:sequence>
+			<xs:attribute name="ОтчДата"
+			              type="Дата"
+			              use="required"/>
+			<xs:attribute name="ОКУД"
+			              type="ПроизвСтрока"
+			              use="required"/>
+			<xs:attribute name="Периодичность"
+			              type="ПроизвСтрока"
+			              use="required"/>
+		<xs:attribute name="УникИдОЭС" type="GUIDтип" use="required"/>
+		<xs:attribute name="ВидОЭС" type="ВидОЭСтип" use="required"/>
+		<xs:attribute name="КодФормы" type="ПроизвСтрока" use="required"/>
+		<xs:attribute name="ВидОтчета" type="ПроизвСтрока" use="required"/>
+		<xs:attribute name="ДатаВремяФормирования" type="ДатаВремя" use="required"/>						  
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Ф0420458Составитель" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:sequence>
+			<xs:element name="Руководитель" type="Ф0420458СоставительРуководитель" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ГлавБух" type="Ф0420458СоставительГлавБух" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Исполнитель" type="Ф0420458СоставительИсполнитель" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="ВидОрг" type="ПроизвСтрока" use="required"/>
+		<xs:attribute name="КодОрг" type="ПроизвСтрока" use="required"/>
+		<xs:attribute name="КодТУ" type="ПроизвСтрока" use="optional"/>
+		<xs:attribute name="БИК" type="ПроизвСтрока" use="optional"/>
+		<xs:attribute name="ОКАТО" type="ПроизвСтрока" use="optional"/>
+		<xs:attribute name="ОКПО" type="ПроизвСтрока" use="optional"/>
+		<xs:attribute name="ОГРН" type="ПроизвСтрока" use="optional"/>
+		<xs:attribute name="СокрНаимен" type="ПроизвСтрока" use="optional"/>
+		<xs:attribute name="Адрес" type="ПроизвСтрока" use="optional"/>
+		<xs:attribute name="ДатаПодписания" type="Дата" use="required"/>
+	</xs:complexType>	
+	
+
+	<xs:complexType name="Ф0420458_РеестрЦБ_Строка_Ну_Уник" 
+						xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:sequence>
+			<xs:element name="Ф0420458_РеестрЦБ_Строка"
+			minOccurs="0"
+			maxOccurs="unbounded">
+			<xs:complexType>
+					<xs:attribute name="ИдентефикаторЦБ"
+					              type="Строка255"
+					              use="required"/>
+					<xs:attribute name="ТипЦБ"
+					              type="ТипЦБ"
+					              use="required"/>
+					<xs:attribute name="НаименованиеЦБ"
+					              type="Строка255"
+					              use="required"/>
+					<xs:attribute name="РегНомерВыпуска"
+					              type="Строка255"
+					              use="required"/>
+					<xs:attribute name="ISIN"
+					              type="Строка255"
+					              use="required"/>
+					<xs:attribute name="НаимЭмитента"
+					              type="Строка255"
+					              use="required"/>
+					<xs:attribute name="ИНН_TINЭмитента"
+					              type="Строка255"
+					              use="required"/>
+					<xs:attribute name="ОГРНЭмитента"
+					              type="Строка255"
+					              use="required"/>
+					<xs:attribute name="КодСтраны"
+					              type="КодСтраны"
+					              use="required"/>
+					<xs:attribute name="КодВалюты "
+					              type="КодВалюты"
+					              use="required"/>
+								  
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Ф0420458_Раздел1_Не_Уник"
+	                xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:sequence>
+			<xs:element name="Ф0420458_Раздел1_Строка"
+			            minOccurs="0"
+			            maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="Резидентность"
+					              type="Резидентность"
+					              use="required"/>
+					<xs:attribute name="УровеньРиска"
+					              type="УровеньРиска"
+					              use="required"/>
+					<xs:attribute name="ТипКлиента"
+					              type="ТипКлиента"
+					              use="required"/>
+					<xs:attribute name="КвалификацияКлиента"
+					              type="КвалификацияКлиента"
+					              use="required"/>
+					<xs:attribute name="СостНПРПортфКл"
+					              type="СостНПРПортфКл"
+					              use="required"/>
+					<xs:attribute name="МетодРасчМаржи"
+					              type="МетодРасчМаржи"
+					              use="required"/>
+					<xs:attribute name="КагортаОбъемаПортфКл"
+					              type="КагортаОбъемаПортфКл"
+					              use="required"/>
+					<xs:attribute name="КолКлиентов"
+					              type="ЦелоеПолож"
+								  use="required"/>
+					<xs:attribute name="КолПортфКлиентов"
+					              type="ЦелоеПолож"
+								  use="required"/>
+					<xs:attribute name="РазмерНПР1"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="РазмерНПР2"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="ПрочаяИнфПоказатель"
+					              type="Строка255"
+								  use="optional"/>
+					<xs:attribute name="ПрочаяИнфДанные"
+					              type="Строка255"
+								  use="optional"/>
+					<xs:attribute name="СтоимостьПортфеля"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СуммаНачМаржи"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляБмДлРуб"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляБмДлВал"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляБмДлЦБ"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляБМДлФьюч"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляБмДлОпц"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляБмДлИное"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляБмКорРуб"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляБмКорВал"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляБмКорЦБ"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляБмКорФьюч"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляБмКорОпц"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляБмКорИное"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляВмДлРуб"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляВмДлВал"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляВмДлЦБ"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляВмДлФьюч"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляВмДлОпц"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляВмДлИное"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляВмКорРуб"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляВмКорВал"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляВмКорЦБ"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляВмКорФьюч"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляВмКорОпц"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляВмКорИное"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СуммаНачМаржиБмВалРиск"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СуммаНачМаржиБмЦБ"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СуммаНачМаржиБмФьюч"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СуммаНачМаржиБмОпц"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СуммаНачМаржиБмИное"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СуммаНачМаржиВмВалРиск"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СуммаНачМаржиВмЦБ"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СуммаНачМаржиВмФьюч"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СуммаНачМаржиВмОпц"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СуммаНачМаржиВмИное"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СуммаНачМаржиРынМетод"
+					              type="Десят"
+								  use="required"/>
+								
+
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Ф0420458_Раздел2_Не_Уник"
+	                xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:sequence>
+			<xs:element name="Ф0420458_Раздел2_Строка"
+			            minOccurs="0"
+			            maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="Резидентность"
+					              type="Резидентность"
+					              use="required"/>
+					<xs:attribute name="УровеньРиска"
+					              type="УровеньРиска"
+					              use="required"/>
+					<xs:attribute name="ТипКлиента"
+					              type="ТипКлиента"
+					              use="required"/>
+					<xs:attribute name="КвалификацияКлиента"
+					              type="КвалификацияКлиента"
+					              use="required"/>
+					<xs:attribute name="ТипОтсечки"
+					              type="ТипОтсечки"
+					              use="required"/>
+					<xs:attribute name="КогортаПоПокНПР2"
+					              type="КогортаПоПокНПР2"
+					              use="required"/>
+					<xs:attribute name="ДатаТоргДняОтчПер"
+					              type="Дата"
+								  use="required"/>
+					<xs:attribute name="КолКлиентов"
+					              type="ЦелоеПолож"
+								  use="required"/>
+					<xs:attribute name="КолПортфКлиентов"
+					              type="ЦелоеПолож"
+								  use="required"/>
+					<xs:attribute name="РазмерНПР1"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="РазмерНПР2"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="ПрочаяИнфПоказатель"
+					              type="Строка255"
+								  use="optional"/>
+					<xs:attribute name="ПрочаяИнфДанные"
+					              type="Строка255"
+								  use="optional"/>
+					<xs:attribute name="СтоимостьПортфеля"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СуммаНачМаржи"
+					              type="Десят"
+								  use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Ф0420458_Раздел3_Не_Уник"
+	                xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:sequence>
+			<xs:element name="Ф0420458_Раздел3_Строка"
+			            minOccurs="0"
+			            maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="Резидентность"
+					              type="Резидентность"
+					              use="required"/>
+					<xs:attribute name="УровеньРиска"
+					              type="УровеньРиска"
+					              use="required"/>
+					<xs:attribute name="ТипКлиента"
+					              type="ТипКлиента"
+					              use="required"/>
+					<xs:attribute name="КвалификацияКлиента"
+					              type="КвалификацияКлиента"
+					              use="required"/>
+					<xs:attribute name="СостНПРПортфКл"
+					              type="СостНПРПортфКл"
+					              use="required"/>
+					<xs:attribute name="ДатаТоргДняОтчПер"
+					              type="Дата"
+								  use="required"/>
+					<xs:attribute name="КолКлиентов"
+					              type="ЦелоеПолож"
+								  use="required"/>
+					<xs:attribute name="КолПортфКлиентов"
+					              type="ЦелоеПолож"
+								  use="required"/>
+					<xs:attribute name="РазмерНПР1"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="РазмерНПР2"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="ПрочаяИнфПоказатель"
+					              type="Строка255"
+								  use="optional"/>
+					<xs:attribute name="ПрочаяИнфДанные"
+					              type="Строка255"
+								  use="optional"/>
+					<xs:attribute name="СтоимостьПортфеля"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СуммаНачМаржи"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляКорВал"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляКорЦБ"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="СтоимостьПортфеляКорИное"
+					              type="Десят"
+								  use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Ф0420458_Раздел4_Не_Уник"
+	                xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:sequence>
+			<xs:element name="Ф0420458_Раздел4_Строка"
+			            minOccurs="0"
+			            maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="Резидентность"
+					              type="Резидентность"
+					              use="required"/>
+					<xs:attribute name="УровеньРиска"
+					              type="УровеньРиска"
+					              use="required"/>
+					<xs:attribute name="ТипКлиента"
+					              type="ТипКлиента"
+					              use="required"/>
+					<xs:attribute name="КвалификацияКлиента"
+					              type="КвалификацияКлиента"
+					              use="required"/>
+					<xs:attribute name="ТипАктива"
+					              type="ТипАктива"
+					              use="required"/>
+					<xs:attribute name="ИдентификаторАктива"
+					              type="Строка255"
+								  use="required"/>
+					<xs:attribute name="КолвоАктива"
+					              type="ЦелоеПолож"
+								  use="required"/>
+					<xs:attribute name="СуммаКорПозиций"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="ПрочаяИнфПоказатель"
+					              type="Строка255"
+								  use="optional"/>
+					<xs:attribute name="ПрочаяИнфДанные"
+					              type="Строка255"
+								  use="optional"/>
+	
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+		<xs:complexType name="Ф0420458_Раздел5_Не_Уник"
+	                xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:sequence>
+			<xs:element name="Ф0420458_Раздел5_Строка"
+			            minOccurs="0"
+			            maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="Резидентность"
+					              type="Резидентность"
+					              use="required"/>
+					<xs:attribute name="УровеньРиска"
+					              type="УровеньРиска"
+					              use="required"/>
+					<xs:attribute name="ТипКлиента"
+					              type="ТипКлиента"
+					              use="required"/>
+					<xs:attribute name="КвалификацияКлиента"
+					              type="КвалификацияКлиента"
+					              use="required"/>
+					<xs:attribute name="КогортаПоОбСделокПринудЗакр"
+					              type="КогортаПоОбСделокПринудЗакр"
+					              use="required"/>
+					<xs:attribute name="ДатаТоргДняОтчПер"
+					              type="Дата"
+								  use="required"/>
+					<xs:attribute name="КолКлиентов"
+					              type="ЦелоеПолож"
+								  use="required"/>
+					<xs:attribute name="КолПортфКлиентов"
+					              type="ЦелоеПолож"
+								  use="required"/>
+					<xs:attribute name="КолСделокПринудЗакр"
+					              type="ЦелоеПолож"
+								  use="required"/>
+					<xs:attribute name="ОбъемСделокПринудЗакрЦБПокупка"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="ОбъемСделокПринудЗакрЦБПродажа"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="ОбъемСделокПринудЗакрВалПокупка"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="ОбъемСделокПринудЗакрВалПродажа"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="ОбъемСделокПринудЗакрФьючПокупка"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="ОбъемСделокПринудЗакрФьючПродажа"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="ОбъемСделокПринудЗакрОпцПокупка"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="ОбъемСделокПринудЗакрОпцПродажа"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="ОбъемСделокПринудЗакрИноеПокупка"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="ОбъемСделокПринудЗакрИноеПродажа"
+					              type="Десят"
+								  use="required"/>
+					<xs:attribute name="ПрочаяИнфПоказатель"
+					              type="Строка255"
+								  use="optional"/>
+					<xs:attribute name="ПрочаяИнфДанные"
+					              type="Строка255"
+								  use="optional"/>
+								  
+	
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Ф0420458_Раздел1">
+		<xs:sequence>
+			<xs:element name="Ф0420458_Раздел1_Данные"
+			            type="Ф0420458_Раздел1_Не_Уник"
+			            minOccurs="0"
+			            maxOccurs="1">
+				<xs:unique name="Ф0420458_Раздел1_Уник">
+					<xs:selector xpath=".//report_0420458:Ф0420458_Раздел1_Строка"/>
+					<xs:field xpath="@Резидентность"/>
+					<xs:field xpath="@УровеньРиска"/>
+					<xs:field xpath="@ТипКлиента"/>
+					<xs:field xpath="@КвалификацияКлиента"/>
+					<xs:field xpath="@СостНПРПортфКл"/>
+					<xs:field xpath="@МетодРасчМаржи"/>
+					<xs:field xpath="@КагортаОбъемаПортфКл"/>
+				</xs:unique>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Ф0420458_Раздел2">
+	<xs:sequence>
+		<xs:element name="Ф0420458_Раздел2_Данные"
+					type="Ф0420458_Раздел2_Не_Уник"
+					minOccurs="0"
+					maxOccurs="1">
+			<xs:unique name="Ф0420458_Раздел2_Уник">
+				<xs:selector xpath=".//report_0420458:Ф0420458_Раздел2_Строка"/>
+				<xs:field xpath="@Резидентность"/>
+				<xs:field xpath="@УровеньРиска"/>
+				<xs:field xpath="@ТипКлиента"/>
+				<xs:field xpath="@КвалификацияКлиента"/>
+				<xs:field xpath="@ТипОтсечки"/>
+				<xs:field xpath="@КогортаПоПокНПР2"/>
+				<xs:field xpath="@ДатаТоргДняОтчПер"/>
+			</xs:unique>
+		</xs:element>
+	</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Ф0420458_Раздел3">
+	<xs:sequence>
+		<xs:element name="Ф0420458_Раздел3_Данные"
+					type="Ф0420458_Раздел3_Не_Уник"
+					minOccurs="0"
+					maxOccurs="1">
+			<xs:unique name="Ф0420458_Раздел3_Уник">
+				<xs:selector xpath=".//report_0420458:Ф0420458_Раздел3_Строка"/>
+				<xs:field xpath="@Резидентность"/>
+				<xs:field xpath="@УровеньРиска"/>
+				<xs:field xpath="@ТипКлиента"/>
+				<xs:field xpath="@КвалификацияКлиента"/>
+				<xs:field xpath="@СостНПРПортфКл"/>
+				<xs:field xpath="@ДатаТоргДняОтчПер"/>
+			</xs:unique>
+		</xs:element>
+	</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Ф0420458_Раздел4">
+	<xs:sequence>
+		<xs:element name="Ф0420458_Раздел4_Данные"
+					type="Ф0420458_Раздел4_Не_Уник"
+					minOccurs="0"
+					maxOccurs="1">
+			<xs:unique name="Ф0420458_Раздел4_Уник">
+				<xs:selector xpath=".//report_0420458:Ф0420458_Раздел4_Строка"/>
+				<xs:field xpath="@Резидентность"/>
+				<xs:field xpath="@УровеньРиска"/>
+				<xs:field xpath="@ТипКлиента"/>
+				<xs:field xpath="@КвалификацияКлиента"/>
+				<xs:field xpath="@ТипАктива"/>
+				<xs:field xpath="@ИдентификаторАктива"/>
+			</xs:unique>
+		</xs:element>
+	</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Ф0420458_Раздел5">
+	<xs:sequence>
+		<xs:element name="Ф0420458_Раздел5_Данные"
+					type="Ф0420458_Раздел5_Не_Уник"
+					minOccurs="0"
+					maxOccurs="1">
+			<xs:unique name="Ф0420458_Раздел5_Уник">
+				<xs:selector xpath=".//report_0420458:Ф0420458_Раздел5_Строка"/>
+				<xs:field xpath="@Резидентность"/>
+				<xs:field xpath="@УровеньРиска"/>
+				<xs:field xpath="@ТипКлиента"/>
+				<xs:field xpath="@КвалификацияКлиента"/>
+				<xs:field xpath="@КогортаПоОбСделокПринудЗакр"/>
+				<xs:field xpath="@ДатаТоргДняОтчПер"/>
+			</xs:unique>
+		</xs:element>
+	</xs:sequence>
+	</xs:complexType>
+	
+		<xs:complexType name="Ф0420458_РеестрЦБ">
+	<xs:sequence>
+		<xs:element name="Ф0420458_РеестрЦБ_Данные"
+					type="Ф0420458_РеестрЦБ_Строка_Ну_Уник"
+					minOccurs="0"
+					maxOccurs="1">
+			<xs:unique name="Ф0420458_РеестрЦБ_Уник">
+				<xs:selector xpath=".//report_0420458:Ф0420458_РеестрЦБ_Строка"/>
+				<xs:field xpath="@ИдентефикаторЦБ"/>
+			</xs:unique>
+		</xs:element>
+	</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Ф0420458СоставительРуководитель" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:attribute name="Должность" type="Строка255Непустая" use="required"/>
+		<xs:attribute name="ФИО" type="Строка255Непустая" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="Ф0420458СоставительГлавБух" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:attribute name="Должность" type="Строка255Непустая" use="required"/>
+		<xs:attribute name="ФИО" type="Строка255Непустая" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="Ф0420458СоставительИсполнитель" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:attribute name="Должность" type="Строка255Непустая" use="required"/>
+		<xs:attribute name="ФИО" type="Строка255Непустая" use="required"/>
+		<xs:attribute name="Телефон" type="Строка255Непустая" use="required"/>
+		<xs:attribute name="Факс" type="Строка255" use="optional"/>
+		<xs:attribute name="ЭлПочта" type="Строка255" use="optional"/>
+	</xs:complexType>	
+	
+
+	<xs:simpleType name="Дата"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:annotation>
+			<xs:appinfo>
+				<xs:ПримерыЗначений>
+					<xs:ЗначениеТипа ЗначТипа="2014-11-02"/>
+				</xs:ПримерыЗначений>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:date">
+			<xs:pattern value="\d{4}-\d{2}-\d{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ЦелоеПолож"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:annotation>
+			<xs:appinfo>
+				<xs:ПримерыЗначений>
+					<xs:ЗначениеТипа ЗначТипа="1"/>
+					<xs:ЗначениеТипа ЗначТипа="12"/>
+					<xs:ЗначениеТипа ЗначТипа="123"/>
+				</xs:ПримерыЗначений>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:positiveInteger"/>
+	</xs:simpleType>
+	<xs:simpleType name="Десят"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:annotation>
+			<xs:appinfo>
+				<xs:ПримерыЗначений>
+					<xs:ЗначениеТипа ЗначТипа="707.00"/>
+					<xs:ЗначениеТипа ЗначТипа="231.00"/>
+					<xs:ЗначениеТипа ЗначТипа="15.60"/>
+				</xs:ПримерыЗначений>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Резидентность"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Резидент"/>
+			<xs:enumeration value="Нерезидент"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ТипКлиента"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ФЛ"/>
+			<xs:enumeration value="ЮЛ"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="УровеньРиска"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Стандартный"/>
+			<xs:enumeration value="Повышенный"/>
+			<xs:enumeration value="Особый"/>
+			<xs:enumeration value="Начальный"/>
+		</xs:restriction>
+	</xs:simpleType>
+		<xs:simpleType name="КвалификацияКлиента"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Квалифицированный"/>
+			<xs:enumeration value="Неквалифицированный"/>
+		</xs:restriction>
+	</xs:simpleType>
+		<xs:simpleType name="СостНПРПортфКл"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="НПР1Больше0"/>
+			<xs:enumeration value="НПР1Меньше0НПР2Больше0"/>
+			<xs:enumeration value="НПР2Меньше0МаржаРавна0"/>
+			<xs:enumeration value="НПР2Меньше0МаржаНе0"/>
+		</xs:restriction>
+	</xs:simpleType>
+		<xs:simpleType name="МетодРасчМаржи"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="БезУчЗависМножеств"/>
+			<xs:enumeration value="СУчЗависМножеств"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="КагортаОбъемаПортфКл"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="(0..10000]"/>
+			<xs:enumeration value="(10000..100000]"/>
+			<xs:enumeration value="(100000..1000000]"/>
+			<xs:enumeration value="(10000000..100000000]"/>
+			<xs:enumeration value="Меньше-10000000"/>
+			<xs:enumeration value="(-1000000..-10000000]"/>
+			<xs:enumeration value="(-100..-1000000]"/>
+			<xs:enumeration value="(-10000..-100000]"/>
+			<xs:enumeration value="(0..-10000]"/>
+			<xs:enumeration value="(1000000..100000000]"/>
+			<xs:enumeration value="Больше100000000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ТипОтсечки"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:restriction base="xs:string">
+			<xs:enumeration value="ОграничительноеВремя"/>
+			<xs:enumeration value="КонецДня"/>
+	</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="КогортаПоПокНПР2"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:restriction base="xs:string">
+			<xs:enumeration value="Меньше-10000000"/>
+			<xs:enumeration value="(-1000000..-10000000]"/>
+			<xs:enumeration value="(-100000..-1000000]"/>
+			<xs:enumeration value="(-10000..-100000]"/>
+			<xs:enumeration value="(0..-10000]"/>
+	</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ТипАктива"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:restriction base="xs:string">
+			<xs:enumeration value="ИностраннаяВалюта"/>
+			<xs:enumeration value="ЦенныеБумаги"/>
+			<xs:enumeration value="Иное"/>
+	</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="КогортаПоОбСделокПринудЗакр"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:restriction base="xs:string">
+			<xs:enumeration value="Больше100000000"/>
+			<xs:enumeration value="(10000000..100000000]"/>
+			<xs:enumeration value="(100000..1000000]"/>
+			<xs:enumeration value="(10000..100000]"/>
+			<xs:enumeration value="(0..10000]"/>
+			<xs:enumeration value="(1000000..10000000]"/>
+	</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ТипЦБ"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:restriction base="xs:string">
+			<xs:enumeration value="BON5"/>
+			<xs:enumeration value="BON6"/>
+			<xs:enumeration value="BON7"/>
+			<xs:enumeration value="DS1"/>
+			<xs:enumeration value="DS2"/>
+			<xs:enumeration value="SS1"/>
+			<xs:enumeration value="SS2"/>
+			<xs:enumeration value="SHS1"/>
+			<xs:enumeration value="SHS2"/>
+			<xs:enumeration value="SHS3"/>
+			<xs:enumeration value="SHS4"/>
+			<xs:enumeration value="SHS5"/>
+			<xs:enumeration value="SHS6"/>
+			<xs:enumeration value="SHS7"/>
+			<xs:enumeration value="SHS8"/>
+			<xs:enumeration value="BIL1"/>
+			<xs:enumeration value="BIL2"/>
+			<xs:enumeration value="BIL3"/>
+			<xs:enumeration value="BIL4"/>
+			<xs:enumeration value="BIL5"/>
+			<xs:enumeration value="BIL6"/>
+			<xs:enumeration value="BIL7"/>
+			<xs:enumeration value="CON"/>
+			<xs:enumeration value="WTS"/>
+			<xs:enumeration value="OPN"/>
+			<xs:enumeration value="KSU"/>
+			<xs:enumeration value="ISU"/>
+			<xs:enumeration value="BON1"/>
+			<xs:enumeration value="BON2"/>
+			<xs:enumeration value="BON3"/>
+			<xs:enumeration value="BON4"/>
+			<xs:enumeration value="OTHER"/>
+			<xs:enumeration value="SN3"/>
+			<xs:enumeration value="SN4"/>
+			<xs:enumeration value="ENC1"/>
+			<xs:enumeration value="ENC2"/>
+			<xs:enumeration value="ENC3"/>
+			<xs:enumeration value="DR1"/>
+			<xs:enumeration value="DR2"/>
+			<xs:enumeration value="SN1"/>
+			<xs:enumeration value="SN2"/>
+			<xs:enumeration value="DFA1"/>
+			<xs:enumeration value="DFA2"/>
+			<xs:enumeration value="DFA3"/>
+			<xs:enumeration value="DFA4"/>
+			<xs:enumeration value="DGR(UDR_DFA)"/>
+			<xs:enumeration value="DGR(OTHER)"/>
+			<xs:enumeration value="DIGS(UDR1)"/>
+			<xs:enumeration value="DIGS(UDR2)"/>
+			<xs:enumeration value="DIGS(UDR3)"/>
+			<xs:enumeration value="UDR1"/>
+			<xs:enumeration value="UDR2"/>
+			<xs:enumeration value="UDR3"/>
+			<xs:enumeration value="DFA5"/>
+	</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="КодСтраны"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:restriction base="xs:string">
+			<xs:enumeration value="800"/>
+			<xs:enumeration value="233"/>
+			<xs:enumeration value="234"/>
+			<xs:enumeration value="238"/>
+			<xs:enumeration value="239"/>
+			<xs:enumeration value="242"/>
+			<xs:enumeration value="246"/>
+			<xs:enumeration value="248"/>
+			<xs:enumeration value="250"/>
+			<xs:enumeration value="254"/>
+			<xs:enumeration value="8"/>
+			<xs:enumeration value="10"/>
+			<xs:enumeration value="12"/>
+			<xs:enumeration value="16"/>
+			<xs:enumeration value="20"/>
+			<xs:enumeration value="24"/>
+			<xs:enumeration value="28"/>
+			<xs:enumeration value="31"/>
+			<xs:enumeration value="32"/>
+			<xs:enumeration value="36"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="462"/>
+			<xs:enumeration value="466"/>
+			<xs:enumeration value="470"/>
+			<xs:enumeration value="474"/>
+			<xs:enumeration value="478"/>
+			<xs:enumeration value="480"/>
+			<xs:enumeration value="484"/>
+			<xs:enumeration value="356"/>
+			<xs:enumeration value="360"/>
+			<xs:enumeration value="364"/>
+			<xs:enumeration value="368"/>
+			<xs:enumeration value="372"/>
+			<xs:enumeration value="376"/>
+			<xs:enumeration value="380"/>
+			<xs:enumeration value="384"/>
+			<xs:enumeration value="388"/>
+			<xs:enumeration value="392"/>
+			<xs:enumeration value="398"/>
+			<xs:enumeration value="400"/>
+			<xs:enumeration value="120"/>
+			<xs:enumeration value="124"/>
+			<xs:enumeration value="132"/>
+			<xs:enumeration value="136"/>
+			<xs:enumeration value="140"/>
+			<xs:enumeration value="144"/>
+			<xs:enumeration value="148"/>
+			<xs:enumeration value="40"/>
+			<xs:enumeration value="44"/>
+			<xs:enumeration value="48"/>
+			<xs:enumeration value="50"/>
+			<xs:enumeration value="51"/>
+			<xs:enumeration value="258"/>
+			<xs:enumeration value="260"/>
+			<xs:enumeration value="262"/>
+			<xs:enumeration value="266"/>
+			<xs:enumeration value="268"/>
+			<xs:enumeration value="270"/>
+			<xs:enumeration value="275"/>
+			<xs:enumeration value="276"/>
+			<xs:enumeration value="288"/>
+			<xs:enumeration value="292"/>
+			<xs:enumeration value="296"/>
+			<xs:enumeration value="300"/>
+			<xs:enumeration value="304"/>
+			<xs:enumeration value="308"/>
+			<xs:enumeration value="312"/>
+			<xs:enumeration value="316"/>
+			<xs:enumeration value="320"/>
+			<xs:enumeration value="324"/>
+			<xs:enumeration value="52"/>
+			<xs:enumeration value="56"/>
+			<xs:enumeration value="60"/>
+			<xs:enumeration value="64"/>
+			<xs:enumeration value="68"/>
+			<xs:enumeration value="70"/>
+			<xs:enumeration value="72"/>
+			<xs:enumeration value="74"/>
+			<xs:enumeration value="76"/>
+			<xs:enumeration value="84"/>
+			<xs:enumeration value="86"/>
+			<xs:enumeration value="90"/>
+			<xs:enumeration value="92"/>
+			<xs:enumeration value="96"/>
+			<xs:enumeration value="100"/>
+			<xs:enumeration value="104"/>
+			<xs:enumeration value="108"/>
+			<xs:enumeration value="112"/>
+			<xs:enumeration value="116"/>
+			<xs:enumeration value="328"/>
+			<xs:enumeration value="332"/>
+			<xs:enumeration value="334"/>
+			<xs:enumeration value="336"/>
+			<xs:enumeration value="340"/>
+			<xs:enumeration value="344"/>
+			<xs:enumeration value="348"/>
+			<xs:enumeration value="352"/>
+			<xs:enumeration value="166"/>
+			<xs:enumeration value="170"/>
+			<xs:enumeration value="174"/>
+			<xs:enumeration value="175"/>
+			<xs:enumeration value="178"/>
+			<xs:enumeration value="180"/>
+			<xs:enumeration value="184"/>
+			<xs:enumeration value="188"/>
+			<xs:enumeration value="404"/>
+			<xs:enumeration value="408"/>
+			<xs:enumeration value="410"/>
+			<xs:enumeration value="414"/>
+			<xs:enumeration value="417"/>
+			<xs:enumeration value="418"/>
+			<xs:enumeration value="422"/>
+			<xs:enumeration value="426"/>
+			<xs:enumeration value="492"/>
+			<xs:enumeration value="496"/>
+			<xs:enumeration value="498"/>
+			<xs:enumeration value="499"/>
+			<xs:enumeration value="500"/>
+			<xs:enumeration value="504"/>
+			<xs:enumeration value="508"/>
+			<xs:enumeration value="512"/>
+			<xs:enumeration value="516"/>
+			<xs:enumeration value="520"/>
+			<xs:enumeration value="524"/>
+			<xs:enumeration value="528"/>
+			<xs:enumeration value="531"/>
+			<xs:enumeration value="533"/>
+			<xs:enumeration value="534"/>
+			<xs:enumeration value="535"/>
+			<xs:enumeration value="540"/>
+			<xs:enumeration value="548"/>
+			<xs:enumeration value="554"/>
+			<xs:enumeration value="428"/>
+			<xs:enumeration value="430"/>
+			<xs:enumeration value="434"/>
+			<xs:enumeration value="438"/>
+			<xs:enumeration value="440"/>
+			<xs:enumeration value="442"/>
+			<xs:enumeration value="152"/>
+			<xs:enumeration value="156"/>
+			<xs:enumeration value="158"/>
+			<xs:enumeration value="162"/>
+			<xs:enumeration value="784"/>
+			<xs:enumeration value="788"/>
+			<xs:enumeration value="792"/>
+			<xs:enumeration value="795"/>
+			<xs:enumeration value="796"/>
+			<xs:enumeration value="798"/>
+			<xs:enumeration value="804"/>
+			<xs:enumeration value="807"/>
+			<xs:enumeration value="818"/>
+			<xs:enumeration value="826"/>
+			<xs:enumeration value="831"/>
+			<xs:enumeration value="832"/>
+			<xs:enumeration value="833"/>
+			<xs:enumeration value="834"/>
+			<xs:enumeration value="840"/>
+			<xs:enumeration value="850"/>
+			<xs:enumeration value="854"/>
+			<xs:enumeration value="858"/>
+			<xs:enumeration value="860"/>
+			<xs:enumeration value="862"/>
+			<xs:enumeration value="876"/>
+			<xs:enumeration value="882"/>
+			<xs:enumeration value="887"/>
+			<xs:enumeration value="894"/>
+			<xs:enumeration value="895"/>
+			<xs:enumeration value="896"/>
+			<xs:enumeration value="998"/>
+			<xs:enumeration value="ЛицоБезГражданства"/>
+			<xs:enumeration value="999"/>
+			<xs:enumeration value="996"/>
+			<xs:enumeration value="446"/>
+			<xs:enumeration value="450"/>
+			<xs:enumeration value="454"/>
+			<xs:enumeration value="458"/>
+			<xs:enumeration value="191"/>
+			<xs:enumeration value="192"/>
+			<xs:enumeration value="196"/>
+			<xs:enumeration value="203"/>
+			<xs:enumeration value="204"/>
+			<xs:enumeration value="208"/>
+			<xs:enumeration value="212"/>
+			<xs:enumeration value="214"/>
+			<xs:enumeration value="218"/>
+			<xs:enumeration value="222"/>
+			<xs:enumeration value="226"/>
+			<xs:enumeration value="231"/>
+			<xs:enumeration value="232"/>
+			<xs:enumeration value="686"/>
+			<xs:enumeration value="688"/>
+			<xs:enumeration value="690"/>
+			<xs:enumeration value="694"/>
+			<xs:enumeration value="702"/>
+			<xs:enumeration value="703"/>
+			<xs:enumeration value="704"/>
+			<xs:enumeration value="558"/>
+			<xs:enumeration value="562"/>
+			<xs:enumeration value="566"/>
+			<xs:enumeration value="570"/>
+			<xs:enumeration value="574"/>
+			<xs:enumeration value="578"/>
+			<xs:enumeration value="580"/>
+			<xs:enumeration value="581"/>
+			<xs:enumeration value="583"/>
+			<xs:enumeration value="584"/>
+			<xs:enumeration value="585"/>
+			<xs:enumeration value="586"/>
+			<xs:enumeration value="591"/>
+			<xs:enumeration value="598"/>
+			<xs:enumeration value="600"/>
+			<xs:enumeration value="604"/>
+			<xs:enumeration value="608"/>
+			<xs:enumeration value="612"/>
+			<xs:enumeration value="616"/>
+			<xs:enumeration value="705"/>
+			<xs:enumeration value="706"/>
+			<xs:enumeration value="710"/>
+			<xs:enumeration value="716"/>
+			<xs:enumeration value="724"/>
+			<xs:enumeration value="728"/>
+			<xs:enumeration value="729"/>
+			<xs:enumeration value="732"/>
+			<xs:enumeration value="740"/>
+			<xs:enumeration value="744"/>
+			<xs:enumeration value="748"/>
+			<xs:enumeration value="752"/>
+			<xs:enumeration value="756"/>
+			<xs:enumeration value="760"/>
+			<xs:enumeration value="762"/>
+			<xs:enumeration value="764"/>
+			<xs:enumeration value="768"/>
+			<xs:enumeration value="772"/>
+			<xs:enumeration value="776"/>
+			<xs:enumeration value="780"/>
+			<xs:enumeration value="620"/>
+			<xs:enumeration value="624"/>
+			<xs:enumeration value="626"/>
+			<xs:enumeration value="630"/>
+			<xs:enumeration value="634"/>
+			<xs:enumeration value="638"/>
+			<xs:enumeration value="642"/>
+			<xs:enumeration value="643"/>
+			<xs:enumeration value="646"/>
+			<xs:enumeration value="652"/>
+			<xs:enumeration value="654"/>
+			<xs:enumeration value="659"/>
+			<xs:enumeration value="660"/>
+			<xs:enumeration value="662"/>
+			<xs:enumeration value="663"/>
+			<xs:enumeration value="666"/>
+			<xs:enumeration value="670"/>
+			<xs:enumeration value="674"/>
+			<xs:enumeration value="678"/>
+			<xs:enumeration value="682"/>
+			<xs:enumeration value="ИныеСтраныВклВОКСМ"/>
+			<xs:enumeration value="897"/>
+			<xs:enumeration value="898"/>
+	</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="КодВалюты"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:restriction base="xs:string">
+			<xs:enumeration value="230-ETB"/>
+			<xs:enumeration value="232-ERN"/>
+			<xs:enumeration value="238-FKP"/>
+			<xs:enumeration value="242-FJD"/>
+			<xs:enumeration value="262-DJF"/>
+			<xs:enumeration value="270-GMD"/>
+			<xs:enumeration value="292-GIP"/>
+			<xs:enumeration value="320-GTQ"/>
+			<xs:enumeration value="324-GNF"/>
+			<xs:enumeration value="328-GYD"/>
+			<xs:enumeration value="332-HTG"/>
+			<xs:enumeration value="340-HNL"/>
+			<xs:enumeration value="344-HKD"/>
+			<xs:enumeration value="348-HUF"/>
+			<xs:enumeration value="352-ISK"/>
+			<xs:enumeration value="356-INR"/>
+			<xs:enumeration value="360-IDR"/>
+			<xs:enumeration value="364-IRR"/>
+			<xs:enumeration value="368-IQD"/>
+			<xs:enumeration value="376-ILS"/>
+			<xs:enumeration value="388-JMD"/>
+			<xs:enumeration value="392-JPY"/>
+			<xs:enumeration value="398-KZT"/>
+			<xs:enumeration value="400-JOD"/>
+			<xs:enumeration value="404-KES"/>
+			<xs:enumeration value="408-KPW"/>
+			<xs:enumeration value="410-KRW"/>
+			<xs:enumeration value="414-KWD"/>
+			<xs:enumeration value="417-KGS"/>
+			<xs:enumeration value="418-LAK"/>
+			<xs:enumeration value="422-LBP"/>
+			<xs:enumeration value="426-LSL"/>
+			<xs:enumeration value="430-LRD"/>
+			<xs:enumeration value="434-LYD"/>
+			<xs:enumeration value="446-MOP"/>
+			<xs:enumeration value="008-ALL"/>
+			<xs:enumeration value="012-DZD"/>
+			<xs:enumeration value="032-ARS"/>
+			<xs:enumeration value="036-AUD"/>
+			<xs:enumeration value="044-BSD"/>
+			<xs:enumeration value="048-BHD"/>
+			<xs:enumeration value="050-BDT"/>
+			<xs:enumeration value="051-AMD"/>
+			<xs:enumeration value="052-BBD"/>
+			<xs:enumeration value="060-BMD"/>
+			<xs:enumeration value="064-BTN"/>
+			<xs:enumeration value="454-MWK"/>
+			<xs:enumeration value="458-MYR"/>
+			<xs:enumeration value="462-MVR"/>
+			<xs:enumeration value="480-MUR"/>
+			<xs:enumeration value="484-MXN"/>
+			<xs:enumeration value="496-MNT"/>
+			<xs:enumeration value="498-MDL"/>
+			<xs:enumeration value="682-SAR"/>
+			<xs:enumeration value="690-SCR"/>
+			<xs:enumeration value="694-SLL"/>
+			<xs:enumeration value="702-SGD"/>
+			<xs:enumeration value="704-VND"/>
+			<xs:enumeration value="706-SOS"/>
+			<xs:enumeration value="710-ZAR"/>
+			<xs:enumeration value="728-SSP"/>
+			<xs:enumeration value="748-SZL"/>
+			<xs:enumeration value="752-SEK"/>
+			<xs:enumeration value="756-CHF"/>
+			<xs:enumeration value="760-SYP"/>
+			<xs:enumeration value="764-THB"/>
+			<xs:enumeration value="776-TOP"/>
+			<xs:enumeration value="780-TTD"/>
+			<xs:enumeration value="504-MAD"/>
+			<xs:enumeration value="512-OMR"/>
+			<xs:enumeration value="516-NAD"/>
+			<xs:enumeration value="524-NPR"/>
+			<xs:enumeration value="532-ANG"/>
+			<xs:enumeration value="533-AWG"/>
+			<xs:enumeration value="548-VUV"/>
+			<xs:enumeration value="554-NZD"/>
+			<xs:enumeration value="558-NIO"/>
+			<xs:enumeration value="566-NGN"/>
+			<xs:enumeration value="578-NOK"/>
+			<xs:enumeration value="586-PKR"/>
+			<xs:enumeration value="068-BOB"/>
+			<xs:enumeration value="072-BWP"/>
+			<xs:enumeration value="084-BZD"/>
+			<xs:enumeration value="090-SBD"/>
+			<xs:enumeration value="096-BND"/>
+			<xs:enumeration value="104-MMK"/>
+			<xs:enumeration value="108-BIF"/>
+			<xs:enumeration value="116-KHR"/>
+			<xs:enumeration value="124-CAD"/>
+			<xs:enumeration value="132-CVE"/>
+			<xs:enumeration value="136-KYD"/>
+			<xs:enumeration value="144-LKR"/>
+			<xs:enumeration value="152-CLP"/>
+			<xs:enumeration value="156-CNY"/>
+			<xs:enumeration value="170-COP"/>
+			<xs:enumeration value="174-KMF"/>
+			<xs:enumeration value="188-CRC"/>
+			<xs:enumeration value="191-HRK"/>
+			<xs:enumeration value="192-CUP"/>
+			<xs:enumeration value="590-PAB"/>
+			<xs:enumeration value="598-PGK"/>
+			<xs:enumeration value="600-PYG"/>
+			<xs:enumeration value="604-PEN"/>
+			<xs:enumeration value="608-PHP"/>
+			<xs:enumeration value="634-QAR"/>
+			<xs:enumeration value="643-RUB"/>
+			<xs:enumeration value="784-AED"/>
+			<xs:enumeration value="788-TND"/>
+			<xs:enumeration value="800-UGX"/>
+			<xs:enumeration value="807-MKD"/>
+			<xs:enumeration value="818-EGP"/>
+			<xs:enumeration value="826-GBP"/>
+			<xs:enumeration value="834-TZS"/>
+			<xs:enumeration value="840-USD"/>
+			<xs:enumeration value="858-UYU"/>
+			<xs:enumeration value="860-UZS"/>
+			<xs:enumeration value="882-WST"/>
+			<xs:enumeration value="886-YER"/>
+			<xs:enumeration value="901-TWD"/>
+			<xs:enumeration value="931-CUC"/>
+			<xs:enumeration value="932-ZWL"/>
+			<xs:enumeration value="934-TMT"/>
+			<xs:enumeration value="646-RWF"/>
+			<xs:enumeration value="654-SHP"/>
+			<xs:enumeration value="203-CZK"/>
+			<xs:enumeration value="208-DKK"/>
+			<xs:enumeration value="214-DOP"/>
+			<xs:enumeration value="222-SVC"/>
+			<xs:enumeration value="936-GHS"/>
+			<xs:enumeration value="938-SDG"/>
+			<xs:enumeration value="940-UYI"/>
+			<xs:enumeration value="941-RSD"/>
+			<xs:enumeration value="943-MZN"/>
+			<xs:enumeration value="944-AZN"/>
+			<xs:enumeration value="946-RON"/>
+			<xs:enumeration value="949-TRY"/>
+			<xs:enumeration value="950-XAF"/>
+			<xs:enumeration value="951-XCD"/>
+			<xs:enumeration value="952-XOF"/>
+			<xs:enumeration value="953-XPF"/>
+			<xs:enumeration value="960-XDR"/>
+			<xs:enumeration value="967-ZMW"/>
+			<xs:enumeration value="968-SRD"/>
+			<xs:enumeration value="969-MGA"/>
+			<xs:enumeration value="970-COU"/>
+			<xs:enumeration value="971-AFN"/>
+			<xs:enumeration value="972-TJS"/>
+			<xs:enumeration value="973-AOA"/>
+			<xs:enumeration value="975-BGN"/>
+			<xs:enumeration value="976-CDF"/>
+			<xs:enumeration value="977-BAM"/>
+			<xs:enumeration value="978-EUR"/>
+			<xs:enumeration value="980-UAH"/>
+			<xs:enumeration value="981-GEL"/>
+			<xs:enumeration value="985-PLN"/>
+			<xs:enumeration value="986-BRL"/>
+			<xs:enumeration value="933-BYN"/>
+			<xs:enumeration value="ИныеВалютыВклВОКВ"/>
+			<xs:enumeration value="925-SLE"/>
+			<xs:enumeration value="926-VED"/>
+			<xs:enumeration value="930-STN"/>
+			<xs:enumeration value="929-MRU"/>
+			<xs:enumeration value="928-VES"/>
+	</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ОГРНтип"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:annotation>
+			<xs:appinfo>
+				<xs:ПримерыЗначений>
+					<xs:ЗначениеТипа ЗначТипа="1234567890123"/>
+				</xs:ПримерыЗначений>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{13}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ПроизвСтрока"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="Строка255" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:restriction base="xs:string">
+	<xs:maxLength value="255"/>
+	</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Строка255Непустая" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:restriction base="xs:string">
+	<xs:maxLength value="255"/>
+	<xs:minLength value="1"/>
+	</xs:restriction>
+	</xs:simpleType>
+    <xs:simpleType name="GUIDтип" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:annotation><xs:appinfo><xs:ПримерыЗначений><xs:ЗначениеТипа ЗначТипа="6F9619FF-8B86-D011-B42D-00CF4FC994FF"/><xs:ЗначениеТипа ЗначТипа="A57E17DF-8B86-B711-A42D-00CF4FC994AC"/></xs:ПримерыЗначений></xs:appinfo></xs:annotation><xs:restriction base="xs:string"><xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/></xs:restriction></xs:simpleType>
+	<xs:simpleType name="ВидОЭСтип" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:restriction base="xs:string"><xs:enumeration value="Отчетность КО"/><xs:enumeration value="Отчетность ТУ"/></xs:restriction></xs:simpleType>
+	<xs:simpleType name="ДатаВремя" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:annotation><xs:appinfo><xs:ПримерыЗначений><xs:ЗначениеТипа ЗначТипа="2014-11-30T13:20:45"/></xs:ПримерыЗначений></xs:appinfo></xs:annotation><xs:restriction base="xs:dateTime"><xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}"/></xs:restriction></xs:simpleType>	
+</xs:schema>

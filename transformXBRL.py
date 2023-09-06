@@ -63,20 +63,21 @@ class transformxml():
                     self.ogrn=context['xbrli:entity']['xbrli:identifier']['#text']
             self.context_data[context['@id']]={}
             td_dict = []
-            if 'xbrldi:explicitMember' in context['xbrli:scenario'].keys():
-                ex_dict=[]
-                if type(context['xbrli:scenario']['xbrldi:explicitMember'])==list:
-                    for ex in context['xbrli:scenario']['xbrldi:explicitMember']:
-                        ex_dict.append(f"{ex['@dimension']}|{ex['#text']}")
-                else:
-                    ex_dict.append(f"{context['xbrli:scenario']['xbrldi:explicitMember']['@dimension']}|{context['xbrli:scenario']['xbrldi:explicitMember']['#text']}")
-            if 'xbrldi:typedMember' in context['xbrli:scenario'].keys():
-                for td_key in context['xbrli:scenario']['xbrldi:typedMember'].keys():
-                    if '@' not in td_key:
-                        taxis_domain = f"{context['xbrli:scenario']['xbrldi:typedMember']['@dimension']}|{td_key}|{context['xbrli:scenario']['xbrldi:typedMember'][td_key]}"
-                        td_dict.append(taxis_domain)
-            self.context_data[context['@id']]['axis'] = self.sort_and_deduplicate(ex_dict)
-            self.context_data[context['@id']]['taxis'] = self.sort_and_deduplicate(td_dict)
+            ex_dict = []
+            if 'xbrli:scenario' in context.keys():
+                if 'xbrldi:explicitMember' in context['xbrli:scenario'].keys():
+                    if type(context['xbrli:scenario']['xbrldi:explicitMember'])==list:
+                        for ex in context['xbrli:scenario']['xbrldi:explicitMember']:
+                            ex_dict.append(f"{ex['@dimension']}|{ex['#text']}")
+                    else:
+                        ex_dict.append(f"{context['xbrli:scenario']['xbrldi:explicitMember']['@dimension']}|{context['xbrli:scenario']['xbrldi:explicitMember']['#text']}")
+                if 'xbrldi:typedMember' in context['xbrli:scenario'].keys():
+                    for td_key in context['xbrli:scenario']['xbrldi:typedMember'].keys():
+                        if '@' not in td_key:
+                            taxis_domain = f"{context['xbrli:scenario']['xbrldi:typedMember']['@dimension']}|{td_key}|{context['xbrli:scenario']['xbrldi:typedMember'][td_key]}"
+                            td_dict.append(taxis_domain)
+                self.context_data[context['@id']]['axis'] = self.sort_and_deduplicate(ex_dict)
+                self.context_data[context['@id']]['taxis'] = self.sort_and_deduplicate(td_dict)
 
 
         for xx in xml_root.keys():
@@ -246,14 +247,16 @@ class transformxml():
             xx['parent'].append(xx['element'])
 
 if __name__ == "__main__":
-    ss=transformxml('mapping_0409728.json')
-    ss.readxbrl('report_0409728_output.xml')
-    ss.parsemapping()
-    ss.do_xml(ss.do_line())
-    ss.saveXBRL(ss.root_xml,'report_0409728_REoutput')
 
-    ss=transformxml('mapping_0409725.json')
-    ss.readxbrl('report_0409725_output.xml')
+    # ss=transformxml('mapping_0409725.json')
+    # ss.readxbrl('report_0409725_output.xml')
+    # ss.parsemapping()
+    # ss.do_xml(ss.do_line())
+    # ss.saveXBRL(ss.root_xml,'report_0409725_REoutput')
+
+    ss=transformxml('mapping_0420458.json')
+    ss.readxbrl('XBRL_1111111111111_ep_nso_purcb_oper_nr_ex_mal_20231231.xml')
     ss.parsemapping()
     ss.do_xml(ss.do_line())
-    ss.saveXBRL(ss.root_xml,'report_0409725_REoutput')
+    ss.saveXBRL(ss.root_xml,'XBRL_1111111111111_ep_nso_purcb_oper_nr_ex_mal_20231231_REoutput')
+
