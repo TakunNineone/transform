@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <xbrli:xbrl xmlns:mem-int="http://www.cbr.ru/xbrl/udr/dom/mem-int" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ko-dic="http://www.cbr.ru/xbrl/nso/ko/dic/ko-dic" xmlns:dim-int="http://www.cbr.ru/xbrl/udr/dim/dim-int" xmlns:iso4217="http://www.xbrl.org/2003/iso4217" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+    <link:schemaRef xlink:href="http://www.cbr.ru/xbrl/nso/ko/rep/2022-11-30/ep/ep_SR_0409728.xsd" xlink:type="simple"/>
+    <xbrli:context id="razdel1_0">
+      <xbrli:entity>
+        <xbrli:identifier scheme="http://www.cbr.ru">5167746349843</xbrli:identifier>
+      </xbrli:entity>
+      <xbrli:period>
+        <xbrli:instant>2023-09-30</xbrli:instant>
+      </xbrli:period>
+      <xbrli:scenario>
+        <xbrldi:explicitMember dimension="dim-int:Vid_DeyatelnostiAxis">mem-int:Kliring_OrgMember</xbrldi:explicitMember>
+      </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="razdel1_1">
+      <xbrli:entity>
+        <xbrli:identifier scheme="http://www.cbr.ru">5167746349843</xbrli:identifier>
+      </xbrli:entity>
+      <xbrli:period>
+        <xbrli:instant>2023-09-30</xbrli:instant>
+      </xbrli:period>
+      <xbrli:scenario>
+        <xbrldi:explicitMember dimension="dim-int:Vid_DeyatelnostiAxis">mem-int:RaschDepozitarijMember</xbrldi:explicitMember>
+      </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="razdel1_2">
+      <xbrli:entity>
+        <xbrli:identifier scheme="http://www.cbr.ru">5167746349843</xbrli:identifier>
+      </xbrli:entity>
+      <xbrli:period>
+        <xbrli:instant>2023-09-30</xbrli:instant>
+      </xbrli:period>
+      <xbrli:scenario>
+        <xbrldi:explicitMember dimension="dim-int:Vid_DeyatelnostiAxis">mem-int:repozitarijMember</xbrldi:explicitMember>
+      </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="razdel2_1">
+      <xbrli:entity>
+        <xbrli:identifier scheme="http://www.cbr.ru">5167746349843</xbrli:identifier>
+      </xbrli:entity>
+      <xbrli:period>
+        <xbrli:startDate>2023-07-01</xbrli:startDate>
+        <xbrli:endDate>2023-09-30</xbrli:endDate>
+      </xbrli:period>
+      <xbrli:scenario>
+        <xbrldi:explicitMember dimension="dim-int:Vid_DeyatelnostiAxis">mem-int:Kliring_OrgMember</xbrldi:explicitMember>
+      </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="razdel2_2">
+      <xbrli:entity>
+        <xbrli:identifier scheme="http://www.cbr.ru">5167746349843</xbrli:identifier>
+      </xbrli:entity>
+      <xbrli:period>
+        <xbrli:instant>2023-09-30</xbrli:instant>
+      </xbrli:period>
+      <xbrli:scenario>
+        <xbrldi:explicitMember dimension="dim-int:Vid_DeyatelnostiAxis">mem-int:RaschDepozitarijMember</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="dim-int:VidSchetaVRaschDepozitariiAxis">mem-int:TorgSchetaDepoMember</xbrldi:explicitMember>
+      </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="razdel2_3">
+      <xbrli:entity>
+        <xbrli:identifier scheme="http://www.cbr.ru">5167746349843</xbrli:identifier>
+      </xbrli:entity>
+      <xbrli:period>
+        <xbrli:instant>2023-09-30</xbrli:instant>
+      </xbrli:period>
+      <xbrli:scenario>
+        <xbrldi:explicitMember dimension="dim-int:Vid_DeyatelnostiAxis">mem-int:RaschDepozitarijMember</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="dim-int:VidSchetaVRaschDepozitariiAxis">mem-int:SubschetaDepoKKliringSchetuDepoMember</xbrldi:explicitMember>
+      </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="razdel2_4">
+      <xbrli:entity>
+        <xbrli:identifier scheme="http://www.cbr.ru">5167746349843</xbrli:identifier>
+      </xbrli:entity>
+      <xbrli:period>
+        <xbrli:instant>2023-09-30</xbrli:instant>
+      </xbrli:period>
+      <xbrli:scenario>
+        <xbrldi:explicitMember dimension="dim-int:Vid_DeyatelnostiAxis">mem-int:RaschDepozitarijMember</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="dim-int:VidSchetaVRaschDepozitariiAxis">mem-int:KliringSchetaDepoMember</xbrldi:explicitMember>
+      </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="razdel2_5">
+      <xbrli:entity>
+        <xbrli:identifier scheme="http://www.cbr.ru">5167746349843</xbrli:identifier>
+      </xbrli:entity>
+      <xbrli:period>
+        <xbrli:instant>2023-09-30</xbrli:instant>
+      </xbrli:period>
+      <xbrli:scenario>
+        <xbrldi:explicitMember dimension="dim-int:Vid_DeyatelnostiAxis">mem-int:RaschDepozitarijMember</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="dim-int:VidSchetaVRaschDepozitariiAxis">mem-int:TorgSchetaDepoIKliringSchetaDepoMember</xbrldi:explicitMember>
+      </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="razdel2_6">
+      <xbrli:entity>
+        <xbrli:identifier scheme="http://www.cbr.ru">5167746349843</xbrli:identifier>
+      </xbrli:entity>
+      <xbrli:period>
+        <xbrli:startDate>2023-07-01</xbrli:startDate>
+        <xbrli:endDate>2023-09-30</xbrli:endDate>
+      </xbrli:period>
+      <xbrli:scenario>
+        <xbrldi:explicitMember dimension="dim-int:Vid_DeyatelnostiAxis">mem-int:RaschDepozitarijMember</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="dim-int:VidSchetaVRaschDepozitariiAxis">mem-int:TorgSchetaDepoMember</xbrldi:explicitMember>
+      </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="razdel2_7">
+      <xbrli:entity>
+        <xbrli:identifier scheme="http://www.cbr.ru">5167746349843</xbrli:identifier>
+      </xbrli:entity>
+      <xbrli:period>
+        <xbrli:startDate>2023-07-01</xbrli:startDate>
+        <xbrli:endDate>2023-09-30</xbrli:endDate>
+      </xbrli:period>
+      <xbrli:scenario>
+        <xbrldi:explicitMember dimension="dim-int:Vid_DeyatelnostiAxis">mem-int:RaschDepozitarijMember</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="dim-int:VidSchetaVRaschDepozitariiAxis">mem-int:SubschetaDepoKKliringSchetuDepoMember</xbrldi:explicitMember>
+      </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="razdel2_8">
+      <xbrli:entity>
+        <xbrli:identifier scheme="http://www.cbr.ru">5167746349843</xbrli:identifier>
+      </xbrli:entity>
+      <xbrli:period>
+        <xbrli:startDate>2023-07-01</xbrli:startDate>
+        <xbrli:endDate>2023-09-30</xbrli:endDate>
+      </xbrli:period>
+      <xbrli:scenario>
+        <xbrldi:explicitMember dimension="dim-int:Vid_DeyatelnostiAxis">mem-int:repozitarijMember</xbrldi:explicitMember>
+      </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:unit id="pure">
+      <xbrli:measure>xbrli:pure</xbrli:measure>
+    </xbrli:unit>
+    <xbrli:unit id="RUB">
+      <xbrli:measure>iso4217:RUB</xbrli:measure>
+    </xbrli:unit>
+    <ko-dic:OsusshOrgOprZakRFFunkInfrOrgFinRynkEdinLichEnumerator contextRef="razdel1_0">mem-int:DaMember</ko-dic:OsusshOrgOprZakRFFunkInfrOrgFinRynkEdinLichEnumerator>
+    <ko-dic:OsusshOrgOprZakRFFunkInfrOrgFinRynkEdinLichEnumerator contextRef="razdel1_1">mem-int:NetMember</ko-dic:OsusshOrgOprZakRFFunkInfrOrgFinRynkEdinLichEnumerator>
+    <ko-dic:OsusshOrgOprZakRFFunkInfrOrgFinRynkEdinLichEnumerator contextRef="razdel1_2">mem-int:DaMember</ko-dic:OsusshOrgOprZakRFFunkInfrOrgFinRynkEdinLichEnumerator>
+    <ko-dic:KolSdelCzKontrDopKlir contextRef="razdel1_0" unitRef="pure" decimals="0">1</ko-dic:KolSdelCzKontrDopKlir>
+    <ko-dic:KolObslUchKlir contextRef="razdel1_0" unitRef="pure" decimals="0">2</ko-dic:KolObslUchKlir>
+    <ko-dic:ObyazSdelCzKontrDopKlir contextRef="razdel2_1" unitRef="RUB" decimals="2">3</ko-dic:ObyazSdelCzKontrDopKlir>
+    <ko-dic:SovRynStoimAktVRubEkv contextRef="razdel2_2" unitRef="RUB" decimals="2">4.05</ko-dic:SovRynStoimAktVRubEkv>
+    <ko-dic:SovRynStoimAktVRubEkv contextRef="razdel2_3" unitRef="RUB" decimals="2">9.25</ko-dic:SovRynStoimAktVRubEkv>
+    <ko-dic:KolObsluzhLicz contextRef="razdel2_2" unitRef="pure" decimals="0">5</ko-dic:KolObsluzhLicz>
+    <ko-dic:KolObsluzhLicz contextRef="razdel2_4" unitRef="pure" decimals="0">11</ko-dic:KolObsluzhLicz>
+    <ko-dic:KolObsluzhLicz contextRef="razdel2_5" unitRef="pure" decimals="0">3</ko-dic:KolObsluzhLicz>
+    <ko-dic:KolObsluzhLicz contextRef="razdel2_3" unitRef="pure" decimals="0">2</ko-dic:KolObsluzhLicz>
+    <ko-dic:ObemSovOperaczij contextRef="razdel2_6" unitRef="RUB" decimals="2">3.25</ko-dic:ObemSovOperaczij>
+    <ko-dic:ObemSovOperaczij contextRef="razdel2_7" unitRef="RUB" decimals="2">11.12</ko-dic:ObemSovOperaczij>
+    <ko-dic:KolDogPredstavInfLiczIZaregVReestreDog contextRef="razdel2_8" unitRef="pure" decimals="0">8</ko-dic:KolDogPredstavInfLiczIZaregVReestreDog>
+    <ko-dic:KolObsluzhKlientov contextRef="razdel1_2" unitRef="pure" decimals="0">7</ko-dic:KolObsluzhKlientov>
+    <ko-dic:ObemPoDogPredInfLicziZaregVReestreDogRep contextRef="razdel2_8" unitRef="RUB" decimals="2">6</ko-dic:ObemPoDogPredInfLicziZaregVReestreDogRep>
+  </xbrli:xbrl>
