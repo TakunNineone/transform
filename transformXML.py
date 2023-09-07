@@ -168,14 +168,14 @@ class transformxml():
                         self.makevarible(context_id_temp,varible.get(pokazatel).get('var'),varible.get(pokazatel).get('enum'),data_stroka.get(pokazatel),varible.get(pokazatel).get('unit'),varible.get(pokazatel).get('decimals'))
 
 if __name__ == "__main__":
-    ss=transformxml('mapping_0420458_m.json')
+    ss=transformxml('mapping_0420458_q.json')
     xbrl=ss.makeXBRL()
-    instance=ss.parseXML('XBRL_1111111111111_ep_nso_purcb_oper_nr_mal_20231231_REoutput.xml')
+    instance=ss.parseXML('report_0420458.xml')
     ss.fillcontext(instance)
     ss.writecontext(xbrl)
     ss.makeUnit(xbrl)
     ss.writevarible(xbrl)
-    ss.saveXBRL(xbrl,'XBRL_1111111111111_ep_nso_purcb_oper_nr_mal_20231231_output')
+    ss.saveXBRL(xbrl,'report_0420458_output')
 
     # ss = transformxml('mapping_0409728.json')
     # xbrl = ss.makeXBRL()

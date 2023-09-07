@@ -8,6 +8,14 @@
 		<xs:complexType xmlns:xs="http://www.w3.org/2001/XMLSchema">
 			<xs:sequence>
 			<xs:element name="Составитель" type="Ф0420458Составитель" minOccurs="1" maxOccurs="1"/>			
+				<xs:element name="Ф0420458_ИнфОбОтчОрг"
+				            type="Ф0420458_ИнфОбОтчОрг"
+				            minOccurs="0"
+				            maxOccurs="1"/>
+				<xs:element name="Ф0420458_СопроводИнф"
+				            type="Ф0420458_СопроводИнф"
+				            minOccurs="0"
+				            maxOccurs="1"/>
 				<xs:element name="Ф0420458_Раздел1"
 				            type="Ф0420458_Раздел1"
 				            minOccurs="0"
@@ -32,14 +40,8 @@
 				            type="Ф0420458_РеестрЦБ"
 				            minOccurs="0"
 				            maxOccurs="1"/>
-				<xs:element name="Ф0420458_ИнфОбОтчОрг"
-				            type="Ф0420458_ИнфОбОтчОрг"
-				            minOccurs="0"
-				            maxOccurs="1"/>
-				<xs:element name="Ф0420458_СопроводИнф"
-				            type="Ф0420458_СопроводИнф"
-				            minOccurs="0"
-				            maxOccurs="1"/>
+
+
 			</xs:sequence>
 			<xs:attribute name="ОтчДата"
 			              type="Дата"
@@ -57,6 +59,7 @@
 		<xs:attribute name="ДатаВремяФормирования" type="ДатаВремя" use="required"/>						  
 		</xs:complexType>
 	</xs:element>
+	
 	<xs:complexType name="Ф0420458Составитель" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 		<xs:sequence>
 			<xs:element name="Руководитель" type="Ф0420458СоставительРуководитель" minOccurs="1" maxOccurs="1"/>
@@ -77,7 +80,7 @@
 	
 	<xs:complexType name="Ф0420458_ИнфОбОтчОрг" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:sequence>
-		<xs:element name="Ф0409725_ИнфОбОтчОрг_Строка"
+		<xs:element name="Ф0420458_ИнфОбОтчОрг_Строка"
 			            minOccurs="0"
 			            maxOccurs="1">
 		<xs:complexType>
@@ -98,7 +101,7 @@
 	
 	<xs:complexType name="Ф0420458_СопроводИнф" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:sequence>
-		<xs:element name="Ф0409725_СопроводИнф_Строка"
+		<xs:element name="Ф0420458_СопроводИнф_Строка"
 			            minOccurs="0"
 			            maxOccurs="1">
 		<xs:complexType>
@@ -114,7 +117,7 @@
 	</xs:complexType>
 	
 
-	<xs:complexType name="Ф0420458_РеестрЦБ_Строка_Ну_Уник" 
+	<xs:complexType name="Ф0420458_РеестрЦБ_Строка_Не_Уник" 
 						xmlns:xs="http://www.w3.org/2001/XMLSchema">
 		<xs:sequence>
 			<xs:element name="Ф0420458_РеестрЦБ_Строка"
@@ -209,117 +212,116 @@
 					<xs:attribute name="СуммаНачМаржи"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляБмДлРуб"
+					<xs:attribute name="СтоимостьПортфеляБМДлРуб"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляБмДлВал"
+					<xs:attribute name="СтоимостьПортфеляБМДлВал"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляБмДлЦБ"
+					<xs:attribute name="СтоимостьПортфеляБМДлЦБ"
 					              type="Десят"
 								  use="required"/>
 					<xs:attribute name="СтоимостьПортфеляБМДлФьюч"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляБмДлОпц"
+					<xs:attribute name="СтоимостьПортфеляБМДлОпц"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляБмДлИное"
+					<xs:attribute name="СтоимостьПортфеляБМДлИное"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляБмКорРуб"
+					<xs:attribute name="СтоимостьПортфеляБМКорРуб"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляБмКорВал"
+					<xs:attribute name="СтоимостьПортфеляБМКорВал"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляБмКорЦБ"
+					<xs:attribute name="СтоимостьПортфеляБМКорЦБ"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляБмКорФьюч"
+					<xs:attribute name="СтоимостьПортфеляБМКорФьюч"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляБмКорОпц"
+					<xs:attribute name="СтоимостьПортфеляБМКорОпц"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляБмКорИное"
+					<xs:attribute name="СтоимостьПортфеляБМКорИное"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляВмДлРуб"
+					<xs:attribute name="СтоимостьПортфеляВМДлРуб"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляВмДлВал"
+					<xs:attribute name="СтоимостьПортфеляВМДлВал"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляВмДлЦБ"
+					<xs:attribute name="СтоимостьПортфеляВМДлЦБ"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляВмДлФьюч"
+					<xs:attribute name="СтоимостьПортфеляВМДлФьюч"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляВмДлОпц"
+					<xs:attribute name="СтоимостьПортфеляВМДлОпц"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляВмДлИное"
+					<xs:attribute name="СтоимостьПортфеляВМДлИное"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляВмКорРуб"
+					<xs:attribute name="СтоимостьПортфеляВМКорРуб"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляВмКорВал"
+					<xs:attribute name="СтоимостьПортфеляВМКорВал"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляВмКорЦБ"
+					<xs:attribute name="СтоимостьПортфеляВМКорЦБ"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляВмКорФьюч"
+					<xs:attribute name="СтоимостьПортфеляВМКорФьюч"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляВмКорОпц"
+					<xs:attribute name="СтоимостьПортфеляВМКорОпц"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СтоимостьПортфеляВмКорИное"
+					<xs:attribute name="СтоимостьПортфеляВМКорИное"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СуммаНачМаржиБмВалРиск"
+					<xs:attribute name="СуммаНачМаржиБМВалРиск"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СуммаНачМаржиБмЦБ"
+					<xs:attribute name="СуммаНачМаржиБМЦБ"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СуммаНачМаржиБмФьюч"
+					<xs:attribute name="СуммаНачМаржиБМФьюч"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СуммаНачМаржиБмОпц"
+					<xs:attribute name="СуммаНачМаржиБМОпц"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СуммаНачМаржиБмИное"
+					<xs:attribute name="СуммаНачМаржиБМИное"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СуммаНачМаржиВмВалРиск"
+					<xs:attribute name="СуммаНачМаржиВМВалРиск"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СуммаНачМаржиВмЦБ"
+					<xs:attribute name="СуммаНачМаржиВМЦБ"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СуммаНачМаржиВмФьюч"
+					<xs:attribute name="СуммаНачМаржиВМФьюч"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СуммаНачМаржиВмОпц"
+					<xs:attribute name="СуммаНачМаржиВМОпц"
 					              type="Десят"
 								  use="required"/>
-					<xs:attribute name="СуммаНачМаржиВмИное"
+					<xs:attribute name="СуммаНачМаржиВМИное"
 					              type="Десят"
 								  use="required"/>
 					<xs:attribute name="СуммаНачМаржиРынМетод"
 					              type="Десят"
 								  use="required"/>
-								
-
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	
 	<xs:complexType name="Ф0420458_Раздел2_Не_Уник"
 	                xmlns:xs="http://www.w3.org/2001/XMLSchema">
 		<xs:sequence>
@@ -656,7 +658,7 @@
 	<xs:complexType name="Ф0420458_РеестрЦБ">
 	<xs:sequence>
 		<xs:element name="Ф0420458_РеестрЦБ_Данные"
-					type="Ф0420458_РеестрЦБ_Строка_Ну_Уник"
+					type="Ф0420458_РеестрЦБ_Строка_Не_Уник"
 					minOccurs="0"
 					maxOccurs="1">
 			<xs:unique name="Ф0420458_РеестрЦБ_Уник">
