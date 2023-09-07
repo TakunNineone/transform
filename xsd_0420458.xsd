@@ -32,6 +32,14 @@
 				            type="Ф0420458_РеестрЦБ"
 				            minOccurs="0"
 				            maxOccurs="1"/>
+				<xs:element name="Ф0420458_ИнфОбОтчОрг"
+				            type="Ф0420458_ИнфОбОтчОрг"
+				            minOccurs="0"
+				            maxOccurs="1"/>
+				<xs:element name="Ф0420458_СопроводИнф"
+				            type="Ф0420458_СопроводИнф"
+				            minOccurs="0"
+				            maxOccurs="1"/>
 			</xs:sequence>
 			<xs:attribute name="ОтчДата"
 			              type="Дата"
@@ -65,7 +73,45 @@
 		<xs:attribute name="СокрНаимен" type="ПроизвСтрока" use="optional"/>
 		<xs:attribute name="Адрес" type="ПроизвСтрока" use="optional"/>
 		<xs:attribute name="ДатаПодписания" type="Дата" use="required"/>
-	</xs:complexType>	
+	</xs:complexType>
+	
+	<xs:complexType name="Ф0420458_ИнфОбОтчОрг" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:sequence>
+		<xs:element name="Ф0409725_ИнфОбОтчОрг_Строка"
+			            minOccurs="0"
+			            maxOccurs="1">
+		<xs:complexType>
+			<xs:attribute name="КодТеррПоОКАТО" type="Строка255" use="required"/>
+			<xs:attribute name="ИНН" type="Строка255" use="required"/>
+			<xs:attribute name="ОГРН" type="ОГРНтип" use="required"/>
+			<xs:attribute name="ПолнФирмНаим" type="Строка255" use="required"/>
+			<xs:attribute name="СокрФирмНаим" type="Строка255" use="required"/>
+			<xs:attribute name="ПочтАдресОтчОрг" type="Строка255" use="required"/>
+			<xs:attribute name="ФИОЛицаПодписСвед" type="Строка255" use="required"/>
+			<xs:attribute name="ДолжЛицаПодписСвед" type="Строка255" use="required"/>
+			<xs:attribute name="ОснИспОбязЛицаПодписСвед" type="Строка255" use="required"/>
+			<xs:attribute name="ПоказателиДеятельности" type="ПоказателиДеятельности" use="required"/>
+		</xs:complexType>
+		</xs:element>
+	</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Ф0420458_СопроводИнф" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:sequence>
+		<xs:element name="Ф0409725_СопроводИнф_Строка"
+			            minOccurs="0"
+			            maxOccurs="1">
+		<xs:complexType>
+			<xs:attribute name="ОКУД" type="ОКУД" use="required"/>
+			<xs:attribute name="ФИОЛицаОтвЗаПрОбласть" type="Строка255" use="required"/>
+			<xs:attribute name="ДолжЛицаОтвЗаПрОбласть" type="Строка255" use="required"/>
+			<xs:attribute name="ТелефонЛицаОтвЗаПрОбласть" type="Строка255" use="required"/>
+			<xs:attribute name="ПризнакНулевогоОтчета" type="ПризнакНулевогоОтчета" use="optional"/>
+			<xs:attribute name="НаимИТРазраб" type="Строка255" use="required"/>
+		</xs:complexType>
+		</xs:element>
+	</xs:sequence>
+	</xs:complexType>
 	
 
 	<xs:complexType name="Ф0420458_РеестрЦБ_Строка_Ну_Уник" 
@@ -607,7 +653,7 @@
 	</xs:sequence>
 	</xs:complexType>
 	
-		<xs:complexType name="Ф0420458_РеестрЦБ">
+	<xs:complexType name="Ф0420458_РеестрЦБ">
 	<xs:sequence>
 		<xs:element name="Ф0420458_РеестрЦБ_Данные"
 					type="Ф0420458_РеестрЦБ_Строка_Ну_Уник"
@@ -620,7 +666,7 @@
 		</xs:element>
 	</xs:sequence>
 	</xs:complexType>
-	
+
 	<xs:complexType name="Ф0420458СоставительРуководитель" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 		<xs:attribute name="Должность" type="Строка255Непустая" use="required"/>
 		<xs:attribute name="ФИО" type="Строка255Непустая" use="required"/>
@@ -1269,6 +1315,29 @@
 			<xs:enumeration value="930-STN"/>
 			<xs:enumeration value="929-MRU"/>
 			<xs:enumeration value="928-VES"/>
+	</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ПоказателиДеятельности"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:restriction base="xs:string">
+			<xs:enumeration value="Малый"/>
+			<xs:enumeration value="Средний"/>
+			<xs:enumeration value="Крупный"/>
+	</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ОКУД"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:restriction base="xs:string">
+			<xs:enumeration value="0420458"/>
+	</xs:restriction>
+	</xs:simpleType>
+	
+		<xs:simpleType name="ПризнакНулевогоОтчета"
+	               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:restriction base="xs:string">
+			<xs:enumeration value="ЗначенияОтсутствуют"/>
 	</xs:restriction>
 	</xs:simpleType>
 	

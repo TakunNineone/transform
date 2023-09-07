@@ -1,4 +1,4 @@
-import itertools,collections,xmltodict,json,xml.dom.minidom as minidom,xml.etree.ElementTree as ET
+import itertools,collections,xmltodict,json,xml.dom.minidom as minidom,xml.etree.ElementTree as ET,durationTransform
 from dateutil.relativedelta import relativedelta
 from datetime import datetime
 
@@ -57,7 +57,7 @@ class transformxml():
     def saveXBRL(self,xbrl,filename):
         rough_string = ET.tostring(xbrl, encoding='utf-8', method='xml')
         reparsed = minidom.parseString(rough_string)
-        reparsed.writexml(open(f'{filename}.xml', 'w'), indent="  ", addindent="  ", newl='\n', encoding="utf-8")
+        reparsed.writexml(open(f'{filename}.xml', 'w',encoding='utf-8'), indent="  ", addindent="  ", newl='\n', encoding='utf-8')
 
     def makecontext(self,context_id,ogrn,period,duration,axis,taxis,taxis_value):
         context = ET.Element("xbrli:context")
@@ -67,25 +67,25 @@ class transformxml():
         ident.attrib = {"scheme": "http://www.cbr.ru"}
         ident.text = ogrn
         period_ = ET.SubElement(context, "xbrli:period")
-        period_date = datetime.strptime(period, '%Y-%m-%d').date()
         if duration:
             startdate = ET.SubElement(period_, "xbrli:startDate")
-            startdate.text = str(period_date - relativedelta (months=int(duration)) + relativedelta(days=1))
+            startdate.text = durationTransform.return_date(period,duration)
             enddate = ET.SubElement(period_, "xbrli:endDate")
             enddate.text = period
         else:
             instant = ET.SubElement(period_, "xbrli:instant")
             instant.text = period
-        scenario = ET.SubElement(context, "xbrli:scenario")
-        for xx in axis:
-            explicitMember1 = ET.SubElement(scenario, "xbrldi:explicitMember")
-            explicitMember1.attrib = {'dimension': xx.split('|')[0]}
-            explicitMember1.text = xx.split('|')[1]
-        if taxis:
-            typedMember = ET.SubElement(scenario, "xbrldi:typedMember")
-            typedMember.attrib = {'dimension': taxis.split('|')[0]}
-            elem_et = ET.SubElement(typedMember, taxis.split('|')[1])
-            elem_et.text = taxis_value
+        if axis or taxis:
+            scenario = ET.SubElement(context, "xbrli:scenario")
+            for xx in axis:
+                explicitMember1 = ET.SubElement(scenario, "xbrldi:explicitMember")
+                explicitMember1.attrib = {'dimension': xx.split('|')[0]}
+                explicitMember1.text = xx.split('|')[1]
+            if taxis:
+                typedMember = ET.SubElement(scenario, "xbrldi:typedMember")
+                typedMember.attrib = {'dimension': taxis.split('|')[0]}
+                elem_et = ET.SubElement(typedMember, taxis.split('|')[1])
+                elem_et.text = taxis_value
         self.contexts.append(context)
 
     def writecontext(self,xbrl):
@@ -140,7 +140,6 @@ class transformxml():
                     if taxis.get(pokazatel):
                         taxis_temp = taxis.get(pokazatel)
                         taxis_value_temp= data_stroka[pokazatel]
-
                 for pokazatel in data_stroka.keys():
                     if varible.get(pokazatel):
                         if varible.get(pokazatel).get('axis')!=None:
@@ -150,12 +149,12 @@ class transformxml():
 
                         if context_var_list==[]:
                             context_id_temp=f'{key}_{i}'
-                            context_var_list.append({'razdel':key,'context_id':context_id_temp,'axis': axis_temp,'taxis':taxis_temp,'taxis_value':taxis_value_temp,'duration':varible.get(pokazatel).get('period')})
+                            context_var_list.append({'razdel':key,'context_id':context_id_temp,'axis': axis_temp,'taxis':taxis_temp,'taxis_value':taxis_value_temp,'duration':varible.get(pokazatel).get('duration')})
                             self.makecontext( context_id_temp, ogrn, period, varible.get(pokazatel).get('duration'),axis_temp, taxis_temp,taxis_value_temp)
                             check= True
                         else:
                             for cc in context_var_list:
-                                if collections.Counter(axis_temp) == collections.Counter(cc.get('axis')) and cc['taxis']==taxis_temp and cc['taxis_value']==taxis_value_temp and cc['duration']==varible.get(pokazatel).get('duration'):
+                                if collections.Counter(axis_temp) == collections.Counter(cc.get('axis')) and cc['taxis']==taxis_temp and cc['taxis_value']==taxis_value_temp and cc['duration']==varible.get(pokazatel).get('duration') :
                                     context_id_temp=cc.get('context_id')
                                     check = True
                                     break
@@ -169,14 +168,14 @@ class transformxml():
                         self.makevarible(context_id_temp,varible.get(pokazatel).get('var'),varible.get(pokazatel).get('enum'),data_stroka.get(pokazatel),varible.get(pokazatel).get('unit'),varible.get(pokazatel).get('decimals'))
 
 if __name__ == "__main__":
-    ss=transformxml('mapping_0420458.json')
+    ss=transformxml('mapping_0420458_m.json')
     xbrl=ss.makeXBRL()
-    instance=ss.parseXML('report_0420458.xml')
+    instance=ss.parseXML('XBRL_1111111111111_ep_nso_purcb_oper_nr_mal_20231231_REoutput.xml')
     ss.fillcontext(instance)
     ss.writecontext(xbrl)
     ss.makeUnit(xbrl)
     ss.writevarible(xbrl)
-    ss.saveXBRL(xbrl,'report_0420458_output')
+    ss.saveXBRL(xbrl,'XBRL_1111111111111_ep_nso_purcb_oper_nr_mal_20231231_output')
 
     # ss = transformxml('mapping_0409728.json')
     # xbrl = ss.makeXBRL()

@@ -11,7 +11,7 @@
     "xmlns:dim-int": "http://www.cbr.ru/xbrl/udr/dim/dim-int",
     "xmlns:nfo-dic": "http://www.cbr.ru/xbrl/nso/nfo/dic"
   },
-  "schemaref": "http://www.cbr.ru/xbrl/nso/purcb/rep/2023-09-30/ep/ep_nso_purcb_oper_nr_ex_mal.xsd",
+  "schemaref": "http://www.cbr.ru/xbrl/nso/purcb/rep/2023-09-30/ep/ep_nso_purcb_oper_nr_mal.xsd",
   "units": {
     "unit1": {
       "id": "pure",
@@ -24,6 +24,143 @@
   },
   "root": "Ф0420458",
   "data": {
+	"razdel_inforg":
+	{
+	   "tag": "Ф0409725_ИнфОбОтчОрг_Строка",
+      "parent_tags": [
+        "Ф0420458_ИнфОбОтчОрг"
+      ],
+	  "lines": null,
+	  "axiss_y_synthetic":{},
+	  "taxis":{},
+	  "varible":
+	  {
+		  "@КодТеррПоОКАТО": {
+          "var": "nfo-dic:Kod_Okato",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+		"@ИНН": {
+          "var": "nfo-dic:INN",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+		"@ОГРН": {
+          "var": "nfo-dic:OGRN_OGRNIP",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+		"@ПолнФирмНаим": {
+          "var": "nfo-dic:PolnFirmNaim",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+		"@СокрФирмНаим": {
+          "var": "nfo-dic:SokrNaimNFO",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+		"@ПочтАдресОтчОрг": {
+          "var": "nfo-dic:Pocht_Adres",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+		"@ФИОЛицаПодписСвед": {
+          "var": "nfo-dic:FIOLiczaPodpisOtch",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+		"@ДолжЛицаПодписСвед": {
+          "var": "nfo-dic:DolzhDLPodpOtch",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+		"@ОснИспОбязЛицаПодписСвед": {
+          "var": "nfo-dic:Osnispobyaz",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+		"@ПоказателиДеятельности": {
+          "var": "purcb-dic:KategoriyaProfUchastnikaEnumerator",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null,
+		  "enum":{"Малый":"mem-int:MalMember",
+				"Средний":"mem-int:SredMember",
+				"Крупный":"mem-int:KrypMember"}
+        }
+	  }
+	},
+	"razdel_soprovodinf":
+	{
+		"tag": "Ф0409725_СопроводИнф_Строка",
+		"parent_tags": ["Ф0420458_СопроводИнф"],
+      "lines": null,
+	  "axiss_y_synthetic":{
+		  "@ОКУД":{
+			  "0420458":["dim-int:OKUDAxis|mem-int:OKUD0420458Member"]
+		  }
+	  },
+	  "taxis":{},
+	  "varible":
+	  {
+		  "@ФИОЛицаОтвЗаПрОбласть":{
+          "var": "nfo-dic:FIOLiczaOtvZaPrOblast",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+		  "@ДолжЛицаОтвЗаПрОбласть":{
+          "var": "nfo-dic:Dolzhnost",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+		  "@ТелефонЛицаОтвЗаПрОбласть":{
+          "var": "nfo-dic:Telefon",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        },
+		  "@ПризнакНулевогоОтчета":{
+          "var": "nfo-dic:PriznakNulevogoOtchetaEnumerator",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null,
+		  "enum":{"ЗначенияОтсутствуют":"mem-int:ZnachPokOtsMember"}
+        },
+		  "@НаимИТРазраб":{
+          "var": "purcb-dic:NaimITrazrabotchika",
+          "decimals": null,
+          "unit": null,
+          "period": "instant",
+          "axis": null
+        }
+	  }
+	},
 	"razdel_reestr": {
       "tag": "Ф0420458_РеестрЦБ_Строка",
       "parent_tags": [
@@ -39,6 +176,9 @@
         "@ТипЦБ": {
           "var": "nfo-dic:TipCZenBumVidFIEnumerator",
           "axis": null,
+		  "decimals": null,
+          "unit": null,
+          "period": "instant",
           "enum": {
             "BON5": "mem-int:BON5_obligacziiingosudarstv_iobligaczii_inczentrbankovMember",
             "BON6": "mem-int:BON6_obligacziibankov_nerezidentovMember",
@@ -141,6 +281,9 @@
         "@КодСтраны": {
           "var": "nfo-dic:Kod_stranEnumerator",
           "axis": null,
+		  "decimals": null,
+          "unit": null,
+          "period": "instant",
           "enum": {
             "100": "mem-int:Strana_100BgrBolgariyaMember",
             "104": "mem-int:Strana_104MmrMyanmaMember",
@@ -405,6 +548,9 @@
         "@КодВалюты": {
           "var": "nfo-dic:Kod_valEnumerator",
           "axis": null,
+		  "decimals": null,
+          "unit": null,
+          "period": "instant",
           "enum": {
             "230-ETB": "mem-int:Valyuta_230EtbEfiopskijByrMember",
             "232-ERN": "mem-int:Valyuta_232ErnNakfaMember",
@@ -1581,14 +1727,14 @@
           "var": "purcb-dic:KolvoSdelokPrinudZakr",
           "decimals": "0",
           "unit": "pure",
-          "duration": "1",
+          "duration": "startQuart",
           "axis": null
         },
         "@ОбъемСделокПринудЗакрЦБПокупка": {
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "1",
+          "duration": "startQuart",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:CZennyeBumagiMember",
             "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
@@ -1598,7 +1744,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "1",
+          "duration": "startQuart",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:CZennyeBumagiMember",
             "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"
@@ -1608,7 +1754,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "1",
+          "duration": "startQuart",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:Inostrannaya_valyutaMember",
             "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
@@ -1618,7 +1764,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "1",
+          "duration": "startQuart",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:Inostrannaya_valyutaMember",
             "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"
@@ -1628,7 +1774,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "1",
+          "duration": "startQuart",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:FyuchersyMember",
             "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
@@ -1638,7 +1784,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "1",
+          "duration": "startQuart",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:FyuchersyMember",
             "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"
@@ -1648,7 +1794,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "1",
+          "duration": "startQuart",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:OpczionyMember",
             "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
@@ -1658,7 +1804,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "1",
+          "duration": "startQuart",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:OpczionyMember",
             "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"
@@ -1668,7 +1814,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "1",
+          "duration": "startQuart",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:Inoe_Member",
             "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
@@ -1678,7 +1824,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "1",
+          "duration": "startQuart",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:Inoe_Member",
             "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"

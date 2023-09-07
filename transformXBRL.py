@@ -52,36 +52,46 @@ class transformxml():
     def readxbrl(self,path):
         with open(path, encoding='utf-8') as xml_file:
             instance = xmltodict.parse(xml_file.read())
-        xml_root=instance['xbrli:xbrl']
-        contexts=xml_root['xbrli:context']
+        print(instance.keys())
+        if 'xbrli:xbrl' in list(instance.keys()):
+            prefix='xbrli:'
+        else:
+            print(11)
+            prefix=''
+        print(prefix)
+        xml_root=instance[f'{prefix}xbrl']
+        contexts=xml_root[f'{prefix}context']
         for context in contexts:
-            if 'xbrli:period' in context.keys():
-                if 'xbrli:instant' in context['xbrli:period'].keys():
-                    self.period=context['xbrli:period']['xbrli:instant']
-            if 'xbrli:entity' in context.keys():
-                if 'xbrli:identifier' in context['xbrli:entity'].keys():
-                    self.ogrn=context['xbrli:entity']['xbrli:identifier']['#text']
+            if f'{prefix}period' in context.keys():
+                if f'{prefix}instant' in context[f'{prefix}period'].keys():
+                    self.period=context[f'{prefix}period'][f'{prefix}instant']
+            if f'{prefix}entity' in context.keys():
+                if f'{prefix}identifier' in context[f'{prefix}entity'].keys():
+                    self.ogrn=context[f'{prefix}entity'][f'{prefix}identifier']['#text']
             self.context_data[context['@id']]={}
             td_dict = []
             ex_dict = []
-            if 'xbrli:scenario' in context.keys():
-                if 'xbrldi:explicitMember' in context['xbrli:scenario'].keys():
-                    if type(context['xbrli:scenario']['xbrldi:explicitMember'])==list:
-                        for ex in context['xbrli:scenario']['xbrldi:explicitMember']:
+            if f'{prefix}scenario' in context.keys():
+                if 'xbrldi:explicitMember' in context[f'{prefix}scenario'].keys():
+                    if type(context[f'{prefix}scenario']['xbrldi:explicitMember'])==list:
+                        for ex in context[f'{prefix}scenario']['xbrldi:explicitMember']:
                             ex_dict.append(f"{ex['@dimension']}|{ex['#text']}")
                     else:
-                        ex_dict.append(f"{context['xbrli:scenario']['xbrldi:explicitMember']['@dimension']}|{context['xbrli:scenario']['xbrldi:explicitMember']['#text']}")
-                if 'xbrldi:typedMember' in context['xbrli:scenario'].keys():
-                    for td_key in context['xbrli:scenario']['xbrldi:typedMember'].keys():
+                        ex_dict.append(f"{context[f'{prefix}scenario']['xbrldi:explicitMember']['@dimension']}|{context[f'{prefix}scenario']['xbrldi:explicitMember']['#text']}")
+                if 'xbrldi:typedMember' in context[f'{prefix}scenario'].keys():
+                    for td_key in context[f'{prefix}scenario']['xbrldi:typedMember'].keys():
                         if '@' not in td_key:
-                            taxis_domain = f"{context['xbrli:scenario']['xbrldi:typedMember']['@dimension']}|{td_key}|{context['xbrli:scenario']['xbrldi:typedMember'][td_key]}"
+                            taxis_domain = f"{context[f'{prefix}scenario']['xbrldi:typedMember']['@dimension']}|{td_key}|{context[f'{prefix}scenario']['xbrldi:typedMember'][td_key]}"
                             td_dict.append(taxis_domain)
                 self.context_data[context['@id']]['axis'] = self.sort_and_deduplicate(ex_dict)
                 self.context_data[context['@id']]['taxis'] = self.sort_and_deduplicate(td_dict)
+            else:
+                self.context_data[context['@id']]['axis'] = []
+                self.context_data[context['@id']]['taxis'] = []
 
 
         for xx in xml_root.keys():
-            if '@' not in xx and 'xbrli:context' != xx and 'xbrli:unit' != xx and 'link:schemaRef' != xx:
+            if '@' not in xx and f'{prefix}context' != xx and f'{prefix}unit' != xx and 'link:schemaRef' != xx:
                 self.varible_data[xx] = {}
                 if type(xml_root[xx]) == list:
                     for yy in xml_root[xx]:
@@ -254,9 +264,9 @@ if __name__ == "__main__":
     # ss.do_xml(ss.do_line())
     # ss.saveXBRL(ss.root_xml,'report_0409725_REoutput')
 
-    ss=transformxml('mapping_0420458.json')
-    ss.readxbrl('XBRL_1111111111111_ep_nso_purcb_oper_nr_ex_mal_20231231.xml')
+    ss=transformxml('mapping_0420458_q.json')
+    ss.readxbrl('XBRL_1111111111111_ep_nso_purcb_oper_nr_mal_20231231.xml')
     ss.parsemapping()
     ss.do_xml(ss.do_line())
-    ss.saveXBRL(ss.root_xml,'XBRL_1111111111111_ep_nso_purcb_oper_nr_ex_mal_20231231_REoutput')
+    ss.saveXBRL(ss.root_xml,'XBRL_1111111111111_ep_nso_purcb_oper_nr_mal_20231231_REoutput')
 
