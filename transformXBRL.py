@@ -265,8 +265,13 @@ if __name__ == "__main__":
     # ss.saveXBRL(ss.root_xml,'report_0409725_REoutput')
 
     ss=transformxml('mapping_0420458_q.json')
-    ss.readxbrl('XBRL_1111111111111_ep_nso_purcb_oper_nr_mal_20231231.xml')
+    ss.readxbrl('report_0420458_q_XBRL.xml')
     ss.parsemapping()
     ss.do_xml(ss.do_line())
-    ss.saveXBRL(ss.root_xml,'XBRL_1111111111111_ep_nso_purcb_oper_nr_mal_20231231_REoutput')
+    ss.saveXBRL(ss.root_xml,'report_0420458_q_XML')
 
+    ss=transformxml('mapping_0420458_m.json')
+    ss.readxbrl('report_0420458_m_XBRL.xml')
+    ss.parsemapping()
+    ss.do_xml(ss.do_line())
+    ss.saveXBRL(ss.root_xml,'report_0420458_m_XML')

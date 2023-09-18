@@ -11,7 +11,7 @@
     "xmlns:dim-int": "http://www.cbr.ru/xbrl/udr/dim/dim-int",
     "xmlns:nfo-dic": "http://www.cbr.ru/xbrl/nso/nfo/dic"
   },
-  "schemaref": "http://www.cbr.ru/xbrl/nso/purcb/rep/2023-09-30/ep/ep_nso_purcb_oper_nr_mal.xsd",
+  "schemaref": "http://www.cbr.ru/xbrl/nso/purcb/rep/2023-09-30/ep/ep_nso_purcb_oper_nr_ex_mal.xsd",
   "units": {
     "unit1": {
       "id": "pure",
@@ -251,7 +251,7 @@
           "(-1000000..-10000000]": [
             "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:OtMinOdinMlnRubDoMinDesMlnRubMember"
           ],
-          "(-100..-1000000]": [
+          "(-100000..-10000000]": [
             "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:OtMinStoTysRubDoMinOdinMlnRubMember"
           ],
           "(-10000..-100000]": [
@@ -260,7 +260,7 @@
           "(0..-10000]": [
             "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:OtNolRubDoMinDesTysRubMember"
           ],
-          "(1000000..100000000]": [
+          "(1000000..10000000]": [
             "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:OtOdinMlnRubDoDesMlnRubMember"
           ],
           "Больше100000000": [
@@ -1169,14 +1169,14 @@
           "var": "purcb-dic:KolvoSdelokPrinudZakr",
           "decimals": "0",
           "unit": "pure",
-          "duration": "startQuart",
+          "duration": "startMonth",
           "axis": null
         },
         "@ОбъемСделокПринудЗакрЦБПокупка": {
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "startQuart",
+          "duration": "startMonth",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:CZennyeBumagiMember",
             "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
@@ -1186,7 +1186,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "startQuart",
+          "duration": "startMonth",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:CZennyeBumagiMember",
             "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"
@@ -1196,7 +1196,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "startQuart",
+          "duration": "startMonth",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:Inostrannaya_valyutaMember",
             "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
@@ -1206,7 +1206,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "startQuart",
+          "duration": "startMonth",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:Inostrannaya_valyutaMember",
             "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"
@@ -1216,7 +1216,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "startQuart",
+          "duration": "startMonth",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:FyuchersyMember",
             "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
@@ -1226,7 +1226,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "startQuart",
+          "duration": "startMonth",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:FyuchersyMember",
             "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"
@@ -1236,7 +1236,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "startQuart",
+          "duration": "startMonth",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:OpczionyMember",
             "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
@@ -1246,7 +1246,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "startQuart",
+          "duration": "startMonth",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:OpczionyMember",
             "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"
@@ -1256,7 +1256,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "startQuart",
+          "duration": "startMonth",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:Inoe_Member",
             "dim-int:NaprSdelAxis|mem-int:PokupkaMember"
@@ -1266,7 +1266,7 @@
           "var": "purcb-dic:ObemSdelokPrinudZakr",
           "decimals": "2",
           "unit": "RUB",
-          "duration": "startQuart",
+          "duration": "startMonth",
           "axis": [
             "dim-int:PoTipamAktivovAxis|mem-int:Inoe_Member",
             "dim-int:NaprSdelAxis|mem-int:ProdazhaMember"

@@ -84,16 +84,16 @@
 			            minOccurs="0"
 			            maxOccurs="1">
 		<xs:complexType>
-			<xs:attribute name="КодТеррПоОКАТО" type="Строка255" use="required"/>
-			<xs:attribute name="ИНН" type="Строка255" use="required"/>
-			<xs:attribute name="ОГРН" type="ОГРНтип" use="required"/>
-			<xs:attribute name="ПолнФирмНаим" type="Строка255" use="required"/>
-			<xs:attribute name="СокрФирмНаим" type="Строка255" use="required"/>
-			<xs:attribute name="ПочтАдресОтчОрг" type="Строка255" use="required"/>
-			<xs:attribute name="ФИОЛицаПодписСвед" type="Строка255" use="required"/>
-			<xs:attribute name="ДолжЛицаПодписСвед" type="Строка255" use="required"/>
-			<xs:attribute name="ОснИспОбязЛицаПодписСвед" type="Строка255" use="required"/>
-			<xs:attribute name="ПоказателиДеятельности" type="ПоказателиДеятельности" use="required"/>
+			<xs:attribute name="КодТеррПоОКАТО" type="Строка255" use="optional"/>
+			<xs:attribute name="ИНН" type="Строка255" use="optional"/>
+			<xs:attribute name="ОГРН" type="ОГРНтип" use="optional"/>
+			<xs:attribute name="ПолнФирмНаим" type="Строка255" use="optional"/>
+			<xs:attribute name="СокрФирмНаим" type="Строка255" use="optional"/>
+			<xs:attribute name="ПочтАдресОтчОрг" type="Строка255" use="optional"/>
+			<xs:attribute name="ФИОЛицаПодписСвед" type="Строка255" use="optional"/>
+			<xs:attribute name="ДолжЛицаПодписСвед" type="Строка255" use="optional"/>
+			<xs:attribute name="ОснИспОбязЛицаПодписСвед" type="Строка255" use="optional"/>
+			<xs:attribute name="ПоказателиДеятельности" type="ПоказателиДеятельности" use="optional"/>
 		</xs:complexType>
 		</xs:element>
 	</xs:sequence>
@@ -105,12 +105,12 @@
 			            minOccurs="0"
 			            maxOccurs="1">
 		<xs:complexType>
-			<xs:attribute name="ОКУД" type="ОКУД" use="required"/>
-			<xs:attribute name="ФИОЛицаОтвЗаПрОбласть" type="Строка255" use="required"/>
-			<xs:attribute name="ДолжЛицаОтвЗаПрОбласть" type="Строка255" use="required"/>
-			<xs:attribute name="ТелефонЛицаОтвЗаПрОбласть" type="Строка255" use="required"/>
+			<xs:attribute name="ОКУД" type="ОКУД" use="optional"/>
+			<xs:attribute name="ФИОЛицаОтвЗаПрОбласть" type="Строка255" use="optional"/>
+			<xs:attribute name="ДолжЛицаОтвЗаПрОбласть" type="Строка255" use="optional"/>
+			<xs:attribute name="ТелефонЛицаОтвЗаПрОбласть" type="Строка255" use="optional"/>
 			<xs:attribute name="ПризнакНулевогоОтчета" type="ПризнакНулевогоОтчета" use="optional"/>
-			<xs:attribute name="НаимИТРазраб" type="Строка255" use="required"/>
+			<xs:attribute name="НаимИТРазраб" type="Строка255" use="optional"/>
 		</xs:complexType>
 		</xs:element>
 	</xs:sequence>
@@ -126,34 +126,34 @@
 			<xs:complexType>
 					<xs:attribute name="ИдентефикаторЦБ"
 					              type="Строка255"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ТипЦБ"
 					              type="ТипЦБ"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="НаименованиеЦБ"
 					              type="Строка255"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="РегНомерВыпуска"
 					              type="Строка255"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ISIN"
 					              type="Строка255"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="НаимЭмитента"
 					              type="Строка255"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ИНН_TINЭмитента"
 					              type="Строка255"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ОГРНЭмитента"
 					              type="Строка255"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="КодСтраны"
 					              type="КодСтраны"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="КодВалюты "
 					              type="КодВалюты"
-					              use="required"/>
+					              use="optional"/>
 								  
 			</xs:complexType>
 		</xs:element>
@@ -169,37 +169,37 @@
 				<xs:complexType>
 					<xs:attribute name="Резидентность"
 					              type="Резидентность"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="УровеньРиска"
 					              type="УровеньРиска"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ТипКлиента"
 					              type="ТипКлиента"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="КвалификацияКлиента"
 					              type="КвалификацияКлиента"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="СостНПРПортфКл"
 					              type="СостНПРПортфКл"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="МетодРасчМаржи"
 					              type="МетодРасчМаржи"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="КагортаОбъемаПортфКл"
 					              type="КагортаОбъемаПортфКл"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="КолКлиентов"
 					              type="ЦелоеПолож"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="КолПортфКлиентов"
 					              type="ЦелоеПолож"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="РазмерНПР1"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="РазмерНПР2"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ПрочаяИнфПоказатель"
 					              type="Строка255"
 								  use="optional"/>
@@ -208,115 +208,115 @@
 								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеля"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаНачМаржи"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляБМДлРуб"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляБМДлВал"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляБМДлЦБ"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляБМДлФьюч"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляБМДлОпц"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляБМДлИное"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляБМКорРуб"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляБМКорВал"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляБМКорЦБ"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляБМКорФьюч"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляБМКорОпц"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляБМКорИное"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляВМДлРуб"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляВМДлВал"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляВМДлЦБ"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляВМДлФьюч"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляВМДлОпц"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляВМДлИное"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляВМКорРуб"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляВМКорВал"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляВМКорЦБ"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляВМКорФьюч"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляВМКорОпц"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляВМКорИное"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаНачМаржиБМВалРиск"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаНачМаржиБМЦБ"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаНачМаржиБМФьюч"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаНачМаржиБМОпц"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаНачМаржиБМИное"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаНачМаржиВМВалРиск"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаНачМаржиВМЦБ"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаНачМаржиВМФьюч"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаНачМаржиВМОпц"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаНачМаржиВМИное"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаНачМаржиРынМетод"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
@@ -331,37 +331,37 @@
 				<xs:complexType>
 					<xs:attribute name="Резидентность"
 					              type="Резидентность"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="УровеньРиска"
 					              type="УровеньРиска"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ТипКлиента"
 					              type="ТипКлиента"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="КвалификацияКлиента"
 					              type="КвалификацияКлиента"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ТипОтсечки"
 					              type="ТипОтсечки"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="КогортаПоПокНПР2"
 					              type="КогортаПоПокНПР2"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ДатаТоргДняОтчПер"
 					              type="Дата"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="КолКлиентов"
 					              type="ЦелоеПолож"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="КолПортфКлиентов"
 					              type="ЦелоеПолож"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="РазмерНПР1"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="РазмерНПР2"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ПрочаяИнфПоказатель"
 					              type="Строка255"
 								  use="optional"/>
@@ -370,10 +370,10 @@
 								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеля"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаНачМаржи"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
@@ -387,34 +387,34 @@
 				<xs:complexType>
 					<xs:attribute name="Резидентность"
 					              type="Резидентность"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="УровеньРиска"
 					              type="УровеньРиска"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ТипКлиента"
 					              type="ТипКлиента"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="КвалификацияКлиента"
 					              type="КвалификацияКлиента"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="СостНПРПортфКл"
 					              type="СостНПРПортфКл"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ДатаТоргДняОтчПер"
 					              type="Дата"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="КолКлиентов"
 					              type="ЦелоеПолож"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="КолПортфКлиентов"
 					              type="ЦелоеПолож"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="РазмерНПР1"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="РазмерНПР2"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ПрочаяИнфПоказатель"
 					              type="Строка255"
 								  use="optional"/>
@@ -423,19 +423,19 @@
 								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеля"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаНачМаржи"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляКорВал"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляКорЦБ"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СтоимостьПортфеляКорИное"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
@@ -449,28 +449,28 @@
 				<xs:complexType>
 					<xs:attribute name="Резидентность"
 					              type="Резидентность"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="УровеньРиска"
 					              type="УровеньРиска"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ТипКлиента"
 					              type="ТипКлиента"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="КвалификацияКлиента"
 					              type="КвалификацияКлиента"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ТипАктива"
 					              type="ТипАктива"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ИдентификаторАктива"
 					              type="Строка255"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="КолвоАктива"
 					              type="ЦелоеПолож"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="СуммаКорПозиций"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ПрочаяИнфПоказатель"
 					              type="Строка255"
 								  use="optional"/>
@@ -491,61 +491,61 @@
 				<xs:complexType>
 					<xs:attribute name="Резидентность"
 					              type="Резидентность"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="УровеньРиска"
 					              type="УровеньРиска"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ТипКлиента"
 					              type="ТипКлиента"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="КвалификацияКлиента"
 					              type="КвалификацияКлиента"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="КогортаПоОбСделокПринудЗакр"
 					              type="КогортаПоОбСделокПринудЗакр"
-					              use="required"/>
+					              use="optional"/>
 					<xs:attribute name="ДатаТоргДняОтчПер"
 					              type="Дата"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="КолКлиентов"
 					              type="ЦелоеПолож"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="КолПортфКлиентов"
 					              type="ЦелоеПолож"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="КолСделокПринудЗакр"
 					              type="ЦелоеПолож"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ОбъемСделокПринудЗакрЦБПокупка"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ОбъемСделокПринудЗакрЦБПродажа"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ОбъемСделокПринудЗакрВалПокупка"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ОбъемСделокПринудЗакрВалПродажа"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ОбъемСделокПринудЗакрФьючПокупка"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ОбъемСделокПринудЗакрФьючПродажа"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ОбъемСделокПринудЗакрОпцПокупка"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ОбъемСделокПринудЗакрОпцПродажа"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ОбъемСделокПринудЗакрИноеПокупка"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ОбъемСделокПринудЗакрИноеПродажа"
 					              type="Десят"
-								  use="required"/>
+								  use="optional"/>
 					<xs:attribute name="ПрочаяИнфПоказатель"
 					              type="Строка255"
 								  use="optional"/>
@@ -783,7 +783,7 @@
 			<xs:enumeration value="(10000000..100000000]"/>
 			<xs:enumeration value="Меньше-10000000"/>
 			<xs:enumeration value="(-1000000..-10000000]"/>
-			<xs:enumeration value="(-100..-1000000]"/>
+			<xs:enumeration value="(-100000..-10000000]"/>
 			<xs:enumeration value="(-10000..-100000]"/>
 			<xs:enumeration value="(0..-10000]"/>
 			<xs:enumeration value="(1000000..100000000]"/>

@@ -1,4 +1,5 @@
-import itertools,collections,xmltodict,json,xml.dom.minidom as minidom,xml.etree.ElementTree as ET,durationTransform
+import itertools,collections,xmltodict,json,xml.dom.minidom as minidom,xml.etree.ElementTree as ET,\
+durationTransform
 from dateutil.relativedelta import relativedelta
 from datetime import datetime
 
@@ -170,18 +171,19 @@ class transformxml():
 if __name__ == "__main__":
     ss=transformxml('mapping_0420458_q.json')
     xbrl=ss.makeXBRL()
-    instance=ss.parseXML('report_0420458.xml')
+    instance=ss.parseXML('report_0420458_q_XML.xml')
     ss.fillcontext(instance)
     ss.writecontext(xbrl)
     ss.makeUnit(xbrl)
     ss.writevarible(xbrl)
-    ss.saveXBRL(xbrl,'report_0420458_output')
+    ss.saveXBRL(xbrl,'report_0420458_q_XBRL')
 
-    # ss = transformxml('mapping_0409728.json')
-    # xbrl = ss.makeXBRL()
-    # instance = ss.parseXML('report_0409728.xml')
-    # ss.fillcontext(instance)
-    # ss.writecontext(xbrl)
-    # ss.makeUnit(xbrl)
-    # ss.writevarible(xbrl)
-    # ss.saveXBRL(xbrl,'report_0409728_output')
+    ss=transformxml('mapping_0420458_m.json')
+    xbrl=ss.makeXBRL()
+    instance=ss.parseXML('report_0420458_m_XML.xml')
+    ss.fillcontext(instance)
+    ss.writecontext(xbrl)
+    ss.makeUnit(xbrl)
+    ss.writevarible(xbrl)
+    ss.saveXBRL(xbrl,'report_0420458_m_XBRL')
+

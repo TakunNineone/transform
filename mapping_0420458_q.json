@@ -251,7 +251,7 @@
           "(-1000000..-10000000]": [
             "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:OtMinOdinMlnRubDoMinDesMlnRubMember"
           ],
-          "(-100..-1000000]": [
+          "(-100000..-10000000]": [
             "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:OtMinStoTysRubDoMinOdinMlnRubMember"
           ],
           "(-10000..-100000]": [
@@ -260,7 +260,7 @@
           "(0..-10000]": [
             "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:OtNolRubDoMinDesTysRubMember"
           ],
-          "(1000000..100000000]": [
+          "(1000000..10000000]": [
             "dim-int:KogortaPoObemuPortKlientaAxis|mem-int:OtOdinMlnRubDoDesMlnRubMember"
           ],
           "Больше100000000": [
