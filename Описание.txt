@@ -1,7 +1,0 @@
-xsd_0420458.xsd - xsd схема для XML отчетов.
-report_0420458_m_XML.xml, report_0420458_q_XML.xml - примеры XML отчетов валидных по xsd схеме
-mapping_0420458_m.json - маппинг для точки входа http://www.cbr.ru/xbrl/nso/purcb/rep/2023-09-30/ep/ep_nso_purcb_oper_nr_ex_mal.xsd
-mapping_0420458_q.json - маппинг для точки входа http://www.cbr.ru/xbrl/nso/purcb/rep/2023-09-30/ep/ep_nso_purcb_oper_nr_mal.xsd
-transformXBRL.py, transformXML.py - исправленные скрипты для конвертации (суть конвертации не менялась, были исправления для duration  периодов)
-durationTransform.py - файл с процедурой для поиска правильного duration периода в зависимости от даты сдачи. (в дальнейшем там надо будет описать все периоды сдачи)
-report_0420458_m_XBRL_output.xml, report_0420458_q_XBRL_output.xml - примеры конвертации XML - XBRL
