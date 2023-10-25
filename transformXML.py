@@ -1,5 +1,4 @@
-import itertools,collections,xmltodict,json,xml.dom.minidom as minidom,xml.etree.ElementTree as ET,\
-durationTransform
+import itertools,collections,xmltodict,json,xml.dom.minidom as minidom,xml.etree.ElementTree as ET,durationTransform
 from dateutil.relativedelta import relativedelta
 from datetime import datetime
 
@@ -176,7 +175,7 @@ if __name__ == "__main__":
     ss.writecontext(xbrl)
     ss.makeUnit(xbrl)
     ss.writevarible(xbrl)
-    ss.saveXBRL(xbrl,'report_0420458_q_XBRL')
+    ss.saveXBRL(xbrl,'report_0420458_q_XBRL_output')
 
     ss=transformxml('mapping_0420458_m.json')
     xbrl=ss.makeXBRL()
@@ -185,5 +184,4 @@ if __name__ == "__main__":
     ss.writecontext(xbrl)
     ss.makeUnit(xbrl)
     ss.writevarible(xbrl)
-    ss.saveXBRL(xbrl,'report_0420458_m_XBRL')
-
+    ss.saveXBRL(xbrl,'report_0420458_m_XBRL_output')

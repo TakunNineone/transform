@@ -1,4 +1,4 @@
-import numpy,xmltodict,json,xml.dom.minidom as minidom,xml.etree.ElementTree as ET,operator
+import numpy,xmltodict,json,xml.dom.minidom as minidom,xml.etree.ElementTree as ET,operator,lxml
 
 class transformxml():
     def __init__(self, path):
@@ -258,20 +258,16 @@ class transformxml():
 
 if __name__ == "__main__":
 
-    # ss=transformxml('mapping_0409725.json')
-    # ss.readxbrl('report_0409725_output.xml')
-    # ss.parsemapping()
-    # ss.do_xml(ss.do_line())
-    # ss.saveXBRL(ss.root_xml,'report_0409725_REoutput')
-
-    ss=transformxml('mapping_0420458_q.json')
-    ss.readxbrl('report_0420458_q_XBRL.xml')
-    ss.parsemapping()
-    ss.do_xml(ss.do_line())
-    ss.saveXBRL(ss.root_xml,'report_0420458_q_XML')
 
     ss=transformxml('mapping_0420458_m.json')
-    ss.readxbrl('report_0420458_m_XBRL.xml')
+    ss.readxbrl('report_0420458_m_XBRL_output.xml')
     ss.parsemapping()
     ss.do_xml(ss.do_line())
-    ss.saveXBRL(ss.root_xml,'report_0420458_m_XML')
+    ss.saveXBRL(ss.root_xml,'report_0420458_m_XML_REoutput')
+
+    ss=transformxml('mapping_0420458_q.json')
+    ss.readxbrl('report_0420458_q_XBRL_output.xml')
+    ss.parsemapping()
+    ss.do_xml(ss.do_line())
+    ss.saveXBRL(ss.root_xml,'report_0420458_q_XML_REoutput')
+
