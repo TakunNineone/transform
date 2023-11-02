@@ -56,7 +56,6 @@ class transformxml():
         if 'xbrli:xbrl' in list(instance.keys()):
             prefix='xbrli:'
         else:
-            print(11)
             prefix=''
         print(prefix)
         xml_root=instance[f'{prefix}xbrl']
@@ -174,18 +173,20 @@ class transformxml():
             self.axis_synt_list.append(axis_synt_list_temp)
             self.taxis_list.append(taxis_list_temp)
 
-        # for xx in self.var_list:
-        #     print(xx)
-
 
     def find_in_mapping(self,var_taxonomy,axis_taxonomy,taxis_taxonomy):
+        print(var_taxonomy)
         taxis_taxonomy_clean=[]
         for xx in taxis_taxonomy:
             taxis_taxonomy_clean.append(xx.split('|')[0]+'|'+xx.split('|')[1])
+
+        zz=self.var_list
         for xx in self.var_list:
             for kk in xx['data'].keys():
+                print(kk)
                 if var_taxonomy == xx['data'][kk]['var_tax']:
                     if numpy.isin(xx['razdel_axis'],self.only_axis(axis_taxonomy)).all() and numpy.isin(xx['razdel_taxis'],taxis_taxonomy_clean).all():
+
                         line_osi = []
                         find_osi = []
                         for zz in axis_taxonomy:
@@ -260,14 +261,14 @@ if __name__ == "__main__":
 
 
     ss=transformxml('mapping_0420458_m.json')
-    ss.readxbrl('report_0420458_m_XBRL_output.xml')
+    ss.readxbrl('XBRL_1111111111111_ep_nso_purcb_oper_nr_ex_mal_20231231.xml')
     ss.parsemapping()
     ss.do_xml(ss.do_line())
-    ss.saveXBRL(ss.root_xml,'report_0420458_m_XML_REoutput')
+    ss.saveXBRL(ss.root_xml,'XBRL_1111111111111_ep_nso_purcb_oper_nr_ex_mal_20231231_OUTPUT')
 
-    ss=transformxml('mapping_0420458_q.json')
-    ss.readxbrl('report_0420458_q_XBRL_output.xml')
-    ss.parsemapping()
-    ss.do_xml(ss.do_line())
-    ss.saveXBRL(ss.root_xml,'report_0420458_q_XML_REoutput')
+    # ss=transformxml('mapping_0420458_q.json')
+    # ss.readxbrl('report_0420458_q_XBRL_output.xml')
+    # ss.parsemapping()
+    # ss.do_xml(ss.do_line())
+    # ss.saveXBRL(ss.root_xml,'report_0420458_q_XML_REoutput')
 
